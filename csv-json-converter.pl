@@ -19,8 +19,8 @@ foreach(@ARGV){
     my $new_file = $_;
     $new_file =~ s/\.csv/\.json/g;
     open($fh, '>', "$new_file") or die "";
-    print $fh "\{\n";
-    print $fh "\"round\":\n";
+    print $fh "\{\"rounds\":\[\n";
+    print $fh "\{\"round\":\n";
     my $prev_round = -1;
     my @headers = split(/,/, $round_data[0]);
     $headers[5] =~ s/\n//g;
@@ -45,6 +45,12 @@ foreach(@ARGV){
                     print $fh "\t\t\"$headers[4]\":\"$line[4]\",\n";
                     print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
                     print $fh "\t\t\}\n";
+                    if ($#round_data > $inc2+1){
+                        my @temp = split(/,/, $round_data[$inc2+1]);
+                        if ($temp[0] == $round && !($temp[1] =~ m/BYES:/)){
+                            print $fh "\t\t,\n";
+                        }
+                    }
             }
             print $fh "\t\]\n";
             $inc = $inc2;
@@ -58,12 +64,12 @@ foreach(@ARGV){
                 print $fh "\t\"Bye\":\"\"\n";
             }
             print $fh "\t\}\n";
-            if ($round <= 15){
-            print $fh ",\n";
-            print $fh "\"round\":\n";
             $round++;
-        }
+            if ($round <= 15){
+            print $fh "\},\n";
+            print $fh "\{\"round\":\n";
+            }
     }
-    print $fh "\n";
     print $fh "\}\n";
+    print $fh "\]\}\n";
 }
