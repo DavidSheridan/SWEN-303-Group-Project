@@ -3,31 +3,51 @@
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/final_results.css">
 
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js">
-        </script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-        </script>
-
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+        <script src="../js/menu.js" ></script>
+        <script src="../js/filter.js" ></script>
     </head>
     <body>
         <div id="border">
+            <!-- Menu js goes here -->
             <div id="menu" class="default">
-                Menus Goes Here
+                <script type="text/javascript">
+                    make_menu_button("Win Statistics", "win_statistics.html");
+                    make_menu_button("Team Results", "team_results.html");
+                    make_menu_button("Home VS Away", "home_vs_away.html");
+                </script>
             </div>
+
+            <!-- Title information goes here -->
             <div id="title" class="default">
                 Title Goes Here
             </div>
+
+            <!-- Placing table needs to be added to this div -->
             <div id="placings_table" class="default">
                 Placing Table goes here .js file
             </div>
+            
+            <!-- 
+                Filters make must be called at when all other divs have 
+                been made as it selects the data set the others will use.
+            -->
             <div id="filters" class="default">
-                Filter goes here run .js file
             </div>
+            
+            <!-- Finals Graph will be handled here -->
             <div id="finals_graph" class="default">
                 Finals Graph to go here. .js file
             </div>
+            
+            <script type="text/javascript">
+                make_season_filter();
+            </script>
         </div>
     </body>
 </html>
