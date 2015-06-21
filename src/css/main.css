@@ -1,20 +1,27 @@
+#border {
+    width:98%;
+    max-width:900px;
+    margin: auto;
+    text-align: center;
+}
+
 #menu {
     width: 98%;
-    margin-left: 10;
+    margin-left: 1%;
     padding: 10;
     background-color: lightblue;
 }
 
 #title {
     width: 98%;
-    margin-left: 10;
+    margin-left: 1%;
     padding: 10;
     background-color: green;
 }
 
 #filters {
     width: 98%;
-    margin-left: 10;
+    margin-left: 1%;
     padding: 10;
     background-color: navy;
 }
