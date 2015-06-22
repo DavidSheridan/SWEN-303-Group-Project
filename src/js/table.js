@@ -1,9 +1,13 @@
+// load initial data
 onStartup();
 
 var dataset;
 var points;
 var teams;
 
+/**
+ * Loads initial data on the page.
+ */
 function onStartup(){
     dataset = [];
     teams = [];
@@ -26,6 +30,10 @@ function onStartup(){
     });
 }
 
+/**
+ * Constructs a table from the specified data and
+ * column headings.
+ */
 function tabl(data, columns){
 	var table = d3.select("#placings_table").append("table")
             .attr("style", "margin-left: 250px"),
@@ -40,7 +48,7 @@ function tabl(data, columns){
         .append("th")
             .text(function(column) { return column; });
 
-    for(var z = 0; z<10; z++){
+    for(var z = 0; z<data.length; z++){
     	da = data[z];
 
 	tbody.append("tr")
@@ -123,6 +131,10 @@ function determineWinner(score){
   
 }
 
+/**
+ * Constructs the data to be displayed by the table
+ * from the data specified in points.
+ */
 function constructData(points){
   var data = []
   for(var i = 0; i < points.length; i++){
@@ -161,6 +173,12 @@ function convertIntToTeam(index, teams){
   return teams[index];
 }
 
+/**
+ * Compares two points. Returns a positive integer 
+ * if p2 is greater than p1, a negative integer if
+ * p1 is greater than p2 and zero if both p1 and p2
+ * are equal.
+ */
 function comparePoints(p1, p2){
   return ((+p2.points) - (+p1.points));  
 }
