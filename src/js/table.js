@@ -18,7 +18,6 @@ function onStartup(){
 	points.sort(comparePoints);
 	
 	var data = constructData(points);
-	var dat = [["1", "Vixen", "16"], ["2", "Magick", "15"]];
 	var cols = ["Placings", "Team", "Points"];
 	
 	var peopleTable = tabl(data, cols);
