@@ -1,0 +1,64 @@
+{
+    "teams": [
+        {
+            "team": {
+                "name": "Adelaide Thunderbirds",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Central Pulse",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Canterbury Tactix",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Melbourne Vixens",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "New South Wales Swifts",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Northern Mystics",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Queensland Firebirds",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Southern Steel",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Waikato Bay of Plenty Magic",
+                "points": 0
+            }
+        },
+        {
+            "team": {
+                "name": "West Coast Fever",
+                "points": 0
+            }
+        }
+    ]
+}

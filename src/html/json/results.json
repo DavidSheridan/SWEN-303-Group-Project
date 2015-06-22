@@ -1,0 +1,84 @@
+{
+    "teams": [
+        {
+            "team": {
+                "name": "Adelaide Thunderbirds",
+                "wins": 0,
+                "loses": 0,
+                "draws": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Central Pulse",
+                "wins": 0,
+                "loses": 0,
+                "draws": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Canterbury Tactix",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Melbourne Vixens",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "New South Wales Swifts",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Northern Mystics",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Queensland Firebirds",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Southern Steel",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "Waikato Bay of Plenty Magic",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        },
+        {
+            "team": {
+                "name": "West Coast Fever",
+                "wins": 0,
+                "draws": 0,
+                "loses": 0
+            }
+        }
+    ]
+}
