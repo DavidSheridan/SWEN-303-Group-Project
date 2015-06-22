@@ -12,6 +12,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         <script src="../js/menu.js" ></script>
         <script src="../js/filter.js" ></script>
+        <script src="../js/sankey.js" ></script>
+        <script src="../js/finals_graph.js" ></script>
 
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"> </script>
         
@@ -46,7 +48,19 @@
             
             <!-- Finals Graph will be handled here -->
             <div id="finals_graph" class="default">
-                Finals Graph to go here. .js file
+                <script type="text/javascript">
+                    make_finals_graph({
+                        "links": [
+                            {"source":"Pulse","target":"Pulse vs Mistics","value":"10"},
+                            {"source":"Mistics","target":"Pulse vs Mistics","value":"30"}
+                        ],
+                        "nodes": [
+                            {"name":"Pulse"},
+                            {"name":"Mistics"},
+                            {"name":"Pulse vs Mistics"}
+                        ]
+                    });
+                </script>
             </div>
             
             <script type="text/javascript">
