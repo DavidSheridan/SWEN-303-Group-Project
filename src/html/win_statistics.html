@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/filter.css">
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+        <script src="../js/menu.js" ></script>
+        <script src="../js/filter.js" ></script>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"> </script>
+        
+        <title>Win Statstics</title>
+    </head>
+
+     <body>
+        <div id="border">
+            <!-- Menu js goes here -->
+            <div id="menu" class="default">
+                <script type="text/javascript">
+                    make_menu_button("Final Results", "final_results.html");
+                    make_menu_button("Team Results", "team_result.html");
+                    make_menu_button("Home VS Away", "home_vs_away.html");
+                </script>
+            </div>
+
+            <!-- Title information goes here -->
+            <div id="title" class="default">
+                <h2>Win Statistics for the year 20XX</h2>
+            </div>
+
+            <div id="win_stats" class="default">
+            </div>
+            <div id="filters" class="default">
+            </div>     
+            
+            <script type="text/javascript">
+                make_season_filter();
+            </script>
+        </div>
+    </body>
+</html>
