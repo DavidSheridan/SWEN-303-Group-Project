@@ -1,0 +1,742 @@
+{"rounds":[
+{"round":
+	{
+	"games":[
+		{
+		"Round":"1",
+		"Date":"Saturday 4 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Southern Steel",
+		"Away Team":"55–46",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Saturday 4 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"57–44",
+		"Venue":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Sunday 5 April",
+		"Home Team":" 2:30 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"48–60",
+		"Venue":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Monday 6 April",
+		"Home Team":" 7:00 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"38–51",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Monday 6 April",
+		"Home Team":" 7:00 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"62–45",
+		"Venue":"Canterbury Tactix"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"2",
+		"Date":"Saturday 11 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"54–47",
+		"Venue":"Southern Steel"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Sunday 12 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"48–47",
+		"Venue":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Sunday 12 April",
+		"Home Team":" 6:30 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"54–50",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Monday 13 April",
+		"Home Team":" 7:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"52–44",
+		"Venue":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Monday 13 April",
+		"Home Team":" 7:00 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"51–54",
+		"Venue":"Melbourne Vixens"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"3",
+		"Date":"Saturday 18 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Central Pulse",
+		"Away Team":"46–58",
+		"Venue":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Sunday 19 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"43–49",
+		"Venue":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Sunday 19 April",
+		"Home Team":" 6:30 pm",
+		"Score":"Southern Steel",
+		"Away Team":"52–48",
+		"Venue":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Monday 20 April",
+		"Home Team":" 7:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"63–45",
+		"Venue":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Monday 20 April",
+		"Home Team":" 5:00 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"57–46",
+		"Venue":"Northern Mystics"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"4",
+		"Date":"Saturday 25 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Central Pulse",
+		"Away Team":"54–60",
+		"Venue":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Saturday 25 April",
+		"Home Team":" 2:00 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"48–31",
+		"Venue":"Southern Steel"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Sunday 26 April",
+		"Home Team":" 2:30 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"53–42",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Monday 27 April",
+		"Home Team":" 7:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"48–53 (42–42)",
+		"Venue":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Monday 27 April",
+		"Home Team":" 7:00 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"59–55",
+		"Venue":"Northern Mystics"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"5",
+		"Date":"Saturday 2 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"48–50",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Sunday 3 May",
+		"Home Team":" 2:30 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"50–42",
+		"Venue":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Monday 4 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Central Pulse",
+		"Away Team":"60–61 (50–50)",
+		"Venue":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Monday 4 May",
+		"Home Team":" 6:00 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"67–66 (54–54)",
+		"Venue":"New South Wales Swifts"
+		}
+	]
+	,
+	"Bye":"Queensland Firebirds and Southern Steel"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"6",
+		"Date":"Saturday 9 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"59–36",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Sunday 10 May",
+		"Home Team":" 2:30 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"40–51",
+		"Venue":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Monday 11 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"52–61",
+		"Venue":"Southern Steel"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Monday 11 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"56–53",
+		"Venue":"West Coast Fever"
+		}
+	]
+	,
+	"Bye":"Canterbury Tactix and Melbourne Vixens"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"7",
+		"Date":"Saturday 16 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"47–48",
+		"Venue":"Southern Steel"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Sunday 17 May",
+		"Home Team":" 12:30 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"49–74",
+		"Venue":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Monday 18 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"50–35",
+		"Venue":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Monday 18 May",
+		"Home Team":" 7:00 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"54–58",
+		"Venue":"Queensland Firebirds"
+		}
+	]
+	,
+	"Bye":"Adelaide Thunderbirds and Central Pulse"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"8",
+		"Date":"Saturday 23 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"49–46",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Sunday 24 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"51–50",
+		"Venue":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Monday 25 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Southern Steel",
+		"Away Team":"39–48",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Monday 25 May",
+		"Home Team":" 7:00 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"65–63 (54–54)",
+		"Venue":"New South Wales Swifts"
+		}
+	]
+	,
+	"Bye":" Northern Mystics and West Coast Fever"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"9",
+		"Date":"Saturday 30 May",
+		"Home Team":" 2:00 pm",
+		"Score":"Central Pulse",
+		"Away Team":"44–66",
+		"Venue":"Southern Steel"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Sunday 31 May",
+		"Home Team":" 2:30 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"57–53",
+		"Venue":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Monday 1 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"47–46",
+		"Venue":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Monday 1 June",
+		"Home Team":" 6:00 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"41–61",
+		"Venue":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":" New South Wales Swifts and Waikato Bay of Plenty Magic"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"10",
+		"Date":"Saturday 6 June",
+		"Home Team":" 2:00 pm",
+		"Score":"Central Pulse",
+		"Away Team":"45–59",
+		"Venue":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Saturday 6 June",
+		"Home Team":" 1:30 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"58–34",
+		"Venue":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Sunday 7 June",
+		"Home Team":" 2:30 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"62–61",
+		"Venue":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Monday 8 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"55–48",
+		"Venue":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Monday 8 June",
+		"Home Team":" 5:00 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"59–48",
+		"Venue":"Southern Steel"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"11",
+		"Date":"Saturday 13 June",
+		"Home Team":" 2:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"53–46",
+		"Venue":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Sunday 14 June",
+		"Home Team":" 2:00 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"58–39",
+		"Venue":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Sunday 14 June",
+		"Home Team":" 6:30 pm",
+		"Score":"Central Pulse",
+		"Away Team":"35–67",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Monday 15 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Southern Steel",
+		"Away Team":"52–50",
+		"Venue":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Monday 15 June",
+		"Home Team":" 7:00 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"52–63",
+		"Venue":"Melbourne Vixens"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"12",
+		"Date":"Saturday 20 June",
+		"Home Team":" 2:00 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"57–61",
+		"Venue":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Saturday 20 June",
+		"Home Team":" 1:30 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"70–40",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Sunday 21 June",
+		"Home Team":" 2:30 pm",
+		"Score":"New South Wales Swifts",
+		"Away Team":"60–63",
+		"Venue":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Monday 22 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"50–46",
+		"Venue":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Monday 22 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Queensland Firebirds",
+		"Away Team":"52–50",
+		"Venue":"Southern Steel"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"13",
+		"Date":"Saturday 27 June",
+		"Home Team":" 2:00 pm",
+		"Score":"Northern Mystics",
+		"Away Team":"57–59",
+		"Venue":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Sunday 28 June",
+		"Home Team":" 12:30 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"38–49",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Sunday 28 June",
+		"Home Team":" 6:30 pm",
+		"Score":"Central Pulse",
+		"Away Team":"53–52",
+		"Venue":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Monday 29 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Southern Steel",
+		"Away Team":"58–49",
+		"Venue":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Monday 29 June",
+		"Home Team":" 7:00 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"63–35",
+		"Venue":"Canterbury Tactix"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"14",
+		"Date":"Saturday 4 July",
+		"Home Team":" 2:00 pm",
+		"Score":"Southern Steel",
+		"Away Team":"55–48",
+		"Venue":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Saturday 4 July",
+		"Home Team":" 2:00 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"80–39",
+		"Venue":"Central Pulse"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Sunday 5 July",
+		"Home Team":" 2:00 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"54–35",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Monday 6 July",
+		"Home Team":" 7:00 pm",
+		"Score":"Canterbury Tactix",
+		"Away Team":"63–56",
+		"Venue":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Monday 6 July",
+		"Home Team":" 6:00 pm",
+		"Score":"West Coast Fever",
+		"Away Team":"52–54",
+		"Venue":"Queensland Firebirds"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"15",
+		"Date":"Sunday 12 July",
+		"Home Team":" 2:30 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"58-43",
+		"Venue":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"15",
+		"Date":"Monday 13 July",
+		"Home Team":" 6:30 pm",
+		"Score":"Adelaide Thunderbirds",
+		"Away Team":"51-45",
+		"Venue":"Southern Steel"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"16",
+		"Date":"Sunday 19 July",
+		"Home Team":" 7:00 pm",
+		"Score":"Waikato Bay of Plenty Magic",
+		"Away Team":"37-51",
+		"Venue":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"17",
+		"Date":"Sunday 26 July",
+		"Home Team":" 2:30 pm",
+		"Score":"Melbourne Vixens",
+		"Away Team":"54-46",
+		"Venue":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":"
+	}
+}
+]}
