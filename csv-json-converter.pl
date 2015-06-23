@@ -27,7 +27,7 @@ foreach(@ARGV){
     #print @headers;
     my $inc;
     my $round = 1;
-    for ($inc = 1; $inc < $#round_data; $inc++){
+    for ($inc = 1; $inc <= $#round_data && $round <= 17; $inc++){
         my @line = split(/,/, $round_data[$inc]);
         print @line;
             my $inc2;
@@ -36,6 +36,7 @@ foreach(@ARGV){
             for ($inc2 = $inc; $inc2 < $#round_data && !($line[1] =~ m/BYE/)
                 && $line[0] == $round;
                 @line = split(/,/, $round_data[++$inc2])){
+                    print @line;
                     $line[5] =~ s/(\n|\")//g;
                     print $fh "\t\t\{\n";
                     print $fh "\t\t\"$headers[0]\":\"$line[0]\",\n";
@@ -46,7 +47,7 @@ foreach(@ARGV){
                     print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
                     print $fh "\t\t\}\n";
                     if ($#round_data > $inc2+1){
-                        my @temp = split(/,/, $round_data[$inc2+1]);
+                        my @temp = split(/,/, $round_data[$inc2]);
                         if ($temp[0] == $round && !($temp[1] =~ m/BYES:/)){
                             print $fh "\t\t,\n";
                         }
@@ -62,10 +63,11 @@ foreach(@ARGV){
             else {
                 print $fh "\t,\n";
                 print $fh "\t\"Bye\":\"\"\n";
+                $inc -= 1;
             }
             print $fh "\t\}\n";
             $round++;
-            if ($round <= 15){
+            if ($round <= 17){
             print $fh "\},\n";
             print $fh "\{\"round\":\n";
             }
