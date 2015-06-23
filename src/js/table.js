@@ -29,11 +29,11 @@ function onStartup(year){
 
 function redraw(year){
   document.getElementById("placings_table").innerHTML=
-    '<input type="button" onclick="onStartup(2008)" value="2008"/>'+
-    '<input type="button" onclick="onStartup(2009)" value="2009"/>'+
-    '<input type="button" onclick="onStartup(2010)" value="2010"/>'+
-    '<input type="button" onclick="onStartup(2011)" value="2011"/>'+
-    '<input type="button" onclick="onStartup(2012)" value="2012"/>'+
+    '<input type="button" onclick="onStartup(2008)" value="2008"/>'+'&nbsp;'+
+    '<input type="button" onclick="onStartup(2009)" value="2009"/>'+'&nbsp;'+
+    '<input type="button" onclick="onStartup(2010)" value="2010"/>'+'&nbsp;'+
+    '<input type="button" onclick="onStartup(2011)" value="2011"/>'+'&nbsp;'+
+    '<input type="button" onclick="onStartup(2012)" value="2012"/>'+'&nbsp;'+
     '<input type="button" onclick="onStartup(2013)" value="2013"/>';
   document.getElementById("title").innerHTML="<h2>Final results for the year "+year+"</h2>"
 }
