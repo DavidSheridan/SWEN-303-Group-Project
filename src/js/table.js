@@ -1,13 +1,14 @@
 // load initial data
-onStartup();
+onStartup(2008);
 
 /**
  * Loads initial data on the page.
  */
-function onStartup(){
+function onStartup(year){
+  redraw();
      dataset = [];
      teams = [];
-     d3.json("json/2008-Table1.json", function(data){
+     d3.json("json/"+year+"-Table1.json", function(data){
        dataset = data.rounds;
      
        d3.json("json/teams.json", function(data){
@@ -24,6 +25,17 @@ function onStartup(){
        
        });
      });
+}
+
+function redraw(){
+  document.getElementById("placings_table").innerHTML=
+    '<input type="button" onclick="onStartup(2008)" value="2008"/>'+
+    '<input type="button" onclick="onStartup(2009)" value="2009"/>'+
+    '<input type="button" onclick="onStartup(2010)" value="2010"/>'+
+    '<input type="button" onclick="onStartup(2011)" value="2011"/>'+
+    '<input type="button" onclick="onStartup(2012)" value="2012"/>'+
+    '<input type="button" onclick="onStartup(2013)" value="2013"/>"';
+
 }
 
 /**
