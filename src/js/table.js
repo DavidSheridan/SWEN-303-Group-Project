@@ -1,33 +1,29 @@
 // load initial data
 onStartup();
 
-var dataset;
-var points;
-var teams;
-
 /**
  * Loads initial data on the page.
  */
 function onStartup(){
-    dataset = [];
-    teams = [];
-    d3.json("json/2008-Table1.json", function(data){
-      dataset = data.rounds;
-    
-      d3.json("json/teams.json", function(data){
-	teams = data.teams;
-	
-	points = createEmptyPointsData(teams)
-	calculatePoints(dataset, points, teams);
-	points.sort(comparePoints);
-	
-	var data = constructData(points);
-	var cols = ["Placings", "Team", "Points"];
-	
-	var peopleTable = tabl(data, cols);
-      
-      });
-    });
+     dataset = [];
+     teams = [];
+     d3.json("json/2008-Table1.json", function(data){
+       dataset = data.rounds;
+     
+       d3.json("json/teams.json", function(data){
+        teams = data.teams;
+ 	
+        points = createEmptyPointsData(teams)
+        calculatePoints(dataset, points, teams);
+        points.sort(comparePoints);
+ 	
+        var data = constructData(points);
+        var cols = ["Placings", "Team", "Points"];
+ 	
+        var peopleTable = tabl(data, cols);
+       
+       });
+     });
 }
 
 /**
@@ -80,7 +76,7 @@ function createEmptyPointsData(teams){
  */
 function calculatePoints(data, points, teams){
   // iterate through rounds
-  for(var i = 0; i < data.length; i++){
+  for(var i = 0; i < 14; i++){
     // iterate through games in current round
     var games = data[i].round.games;
     for(var j = 0; j < games.length; j++){
@@ -91,14 +87,14 @@ function calculatePoints(data, points, teams){
       var awayIndex = convertTeamToInt(away, teams);
       var result = determineWinner(games[j].Score);
       if(result === -1){
-	points[homeIndex].points = +points[homeIndex].points + 2;
+        points[homeIndex].points = +points[homeIndex].points + 2;
       }
       else if(result === 1){
-	points[awayIndex].points = +points[awayIndex].points + 2;
+        points[awayIndex].points = +points[awayIndex].points + 2;
       }
       else{
-	points[homeIndex].points = +points[homeIndex].points + 1;
-	points[awayIndex].points = +points[awayIndex].points + 1;
+        points[homeIndex].points = +points[homeIndex].points + 1;
+        points[awayIndex].points = +points[awayIndex].points + 1;
       }
     }
   }
@@ -119,8 +115,8 @@ function determineWinner(score){
   }
   // get home and away scores
   var data = score.split("-");
-  var homeScore = +score[0];
-  var awayScore = +score[1];
+  var homeScore = +data[0];
+  var awayScore = +data[1];
   // determine which team won
   if(homeScore > awayScore){
     // home team won

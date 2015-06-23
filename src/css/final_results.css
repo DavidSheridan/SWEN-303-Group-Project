@@ -12,19 +12,6 @@
     background-color: yellow;
 }
 
-table, td, th {
-    padding: 5px;
-    border: 3px solid black;
-}
-th {
-    background-color: #ed008c;
-    color: white;
-}
-td, th {
-        border: 1px solid black;
-        text-align: center;
-}
- 
 .node rect {
   cursor: move;
   fill-opacity: .9;
