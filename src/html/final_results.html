@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/final_results.css">
         <link rel="stylesheet" type="text/css" href="../css/filter.css">
@@ -36,12 +37,12 @@
 
             <!-- Title information goes here -->
             <div id="title" class="default">
-                <h2>Final results for the year 20XX</h2>
             </div>
 
             <!-- Placing table needs to be added to this div -->
             <div id="placings_table" class="default">
-               <script src="../js/table.js"></script>
+                
+                <script src="../js/table.js"></script>
             </div>
             
             <!-- 
@@ -56,13 +57,13 @@
                 <script type="text/javascript">
                     make_finals_graph({
                         "links": [
-                            {"source":"Pulse","target":"Pulse vs Mistics","value":"10"},
-                            {"source":"Mistics","target":"Pulse vs Mistics","value":"30"}
+                            {"source":"Pulse","target":"Pulse vs Mystics","value":"10"},
+                            {"source":"Mystics","target":"Pulse vs Mystics","value":"30"}
                         ],
                         "nodes": [
                             {"name":"Pulse"},
-                            {"name":"Mistics"},
-                            {"name":"Pulse vs Mistics"}
+                            {"name":"Mystics"},
+                            {"name":"Pulse vs Mystics"}
                         ]
                     });
                 </script>
