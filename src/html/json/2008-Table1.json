@@ -1,779 +1,742 @@
-{
-    "rounds": [
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 1,
-                        "Date": "Saturday 5 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "33-50",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "TSB Bank Arena, Wellington"
-                    },
-                    {
-                        "Round": 1,
-                        "Date": "Sunday 6 April",
-                        "Time": "1:00 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "48-46",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    },
-                    {
-                        "Round": 1,
-                        "Date": "Sunday 6 April",
-                        "Time": "5:30 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "44-48",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 1,
-                        "Date": "Monday 7 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "46-42",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Energy Events Centre, Rotorua"
-                    },
-                    {
-                        "Round": 1,
-                        "Date": "Monday 7 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "53-42",
-                        "Away Team": "Southern Steel",
-                        "Venue": "Acer Arena, Sydney"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 2,
-                        "Date": "Saturday 12 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "Canterbury Tactix",
-                        "Score": "50-44",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Westpac Centre, Christchurch"
-                    },
-                    {
-                        "Round": 2,
-                        "Date": "Sunday 13 April",
-                        "Time": "1:30 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "62-52",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "State Netball and Hockey Centre,Melbourne"
-                    },
-                    {
-                        "Round": 2,
-                        "Date": "Sunday 13 April",
-                        "Time": "5:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "56-52",
-                        "Away Team": "Northern Mystics",
-                        "Venue": "Energy Events Centre, Rotorua"
-                    },
-                    {
-                        "Round": 2,
-                        "Date": "Monday 14 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "50-52",
-                        "Away Team": "Southern Steel",
-                        "Venue": "TSB Bank Arena, Wellington"
-                    },
-                    {
-                        "Round": 2,
-                        "Date": "Monday 14 April",
-                        "Time": "6:00 pm",
-                        "Home Team": "West Coast Fever",
-                        "Score": "41-54",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Challenge Stadium, Perth"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 3,
-                        "Date": "Saturday 19 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "45-49",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 3,
-                        "Date": "Saturday 19 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "50-47",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "Newcastle Entertainment Centre"
-                    },
-                    {
-                        "Round": 3,
-                        "Date": "Sunday 20 April",
-                        "Time": "1:30 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "38-39",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Vodafone Arena, Melbourne"
-                    },
-                    {
-                        "Round": 3,
-                        "Date": "Monday 21 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "Canterbury Tactix",
-                        "Score": "42-51",
-                        "Away Team": "Southern Steel",
-                        "Venue": "Westpac Arena, Christchurch"
-                    },
-                    {
-                        "Round": 3,
-                        "Date": "Monday 21 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "56-28",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 4,
-                        "Date": "Saturday 26 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "61-47",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    },
-                    {
-                        "Round": 4,
-                        "Date": "Saturday 26 April",
-                        "Time": "2:30 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "46-40",
-                        "Away Team": "Northern Mystics",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    },
-                    {
-                        "Round": 4,
-                        "Date": "Sunday 27 April",
-                        "Time": "1:00 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "54-41",
-                        "Away Team": "Southern Steel",
-                        "Venue": "ETSA Park, Adelaide"
-                    },
-                    {
-                        "Round": 4,
-                        "Date": "Monday 28 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "Canterbury Tactix",
-                        "Score": "50-58",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "Westpac Arena, Christchurch"
-                    },
-                    {
-                        "Round": 4,
-                        "Date": "Monday 28 April",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "59-30",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Sydney Olympic Park Sports Centre"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 5,
-                        "Date": "Saturday 3 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "54-37",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    },
-                    {
-                        "Round": 5,
-                        "Date": "Saturday 3 May",
-                        "Time": "12:30 pm",
-                        "Home Team": "West Coast Fever",
-                        "Score": "46-65",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "Challenge Stadium, Perth"
-                    },
-                    {
-                        "Round": 5,
-                        "Date": "Monday 5 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "48-50",
-                        "Away Team": "Northern Mystics",
-                        "Venue": "Stadium Southland, Invercargill"
-                    },
-                    {
-                        "Round": 5,
-                        "Date": "Monday 5 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "52-53",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "Newcastle Entertainment Centre"
-                    }
-                ],
-                "byes": [
-                    {
-                        "Team": "Adelaide Thunderbirds"
-                    },
-                    {
-                        "Team": "Canterbury Tactix"
-                    }
-                ]
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 6,
-                        "Date": "Saturday 10 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "48-51",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Stadium Southland, Invercargill"
-                    },
-                    {
-                        "Round": 6,
-                        "Date": "Saturday 10 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "66-52",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    },
-                    {
-                        "Round": 6,
-                        "Date": "Monday 12 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "45-59",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 6,
-                        "Date": "Monday 12 May",
-                        "Time": "6:30 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "66-50",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "ETSA Park, Adelaide"
-                    }
-                ],
-                "byes": [
-                    {
-                        "Team": "Melbourne Vixens"
-                    },
-                    {
-                        "Team": "Central Pulse"
-                    }
-                ]
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 7,
-                        "Date": "Saturday 17 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "50-55",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Arena Manawatu, Palmerston North"
-                    },
-                    {
-                        "Round": 7,
-                        "Date": "Sunday 18 May",
-                        "Time": "1:00 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "46-52",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "ETSA Park, Adelaide"
-                    },
-                    {
-                        "Round": 7,
-                        "Date": "Monday 19 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "56-47",
-                        "Away Team": "Southern Steel",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    },
-                    {
-                        "Round": 7,
-                        "Date": "Monday 19 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "66-54",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "Sydney Olympic Park Sports Centre"
-                    }
-                ],
-                "byes": [
-                    {
-                        "Team": "Queensland Firebirds"
-                    },
-                    {
-                        "Team": "Northern Mystics"
-                    }
-                ]
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 8,
-                        "Date": "Saturday 24 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Canterbury Tactix",
-                        "Score": "50-54",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "Westpac Arena, Christchurch"
-                    },
-                    {
-                        "Round": 8,
-                        "Date": "Sunday 25 May",
-                        "Time": "1:30 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "60-51",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    },
-                    {
-                        "Round": 8,
-                        "Date": "Monday 26 May",
-                        "Time": "7:00 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "48-54",
-                        "Away Team": "Northern Mystics",
-                        "Venue": "TSB Bank Arena, Wellington"
-                    },
-                    {
-                        "Round": 8,
-                        "Date": "Monday 26 May",
-                        "Time": "6:30 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "44-50",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "ETSA Park, Adelaide"
-                    }
-                ],
-                "byes": [
-                    {
-                        "Team": "West Coast Fever"
-                    },
-                    {
-                        "Team": "Southern Steel"
-                    }
-                ]
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 9,
-                        "Date": "Saturday 31 May",
-                        "Time": "2:30 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "41-29",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Stadium Southland, Invercargill"
-                    },
-                    {
-                        "Round": 9,
-                        "Date": "Sunday 1 June",
-                        "Time": "1:30 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "57-44",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "State Netball and Hockey Centre,Melbourne"
-                    },
-                    {
-                        "Round": 9,
-                        "Date": "Monday 2 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "50-46",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 9,
-                        "Date": "Monday 2 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "41-47",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    }
-                ],
-                "byes": [
-                    {
-                        "Team": "New South Wales Swifts"
-                    },
-                    {
-                        "Team": "Waikato Bay of Plenty Magic"
-                    }
-                ]
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 10,
-                        "Date": "Saturday 7 June",
-                        "Time": "2:30 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "47-46",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "Stadium Southland, Invercargill"
-                    },
-                    {
-                        "Round": 10,
-                        "Date": "Sunday 8 June",
-                        "Time": "1:00 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "61-41",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "ETSA Park, Adelaide"
-                    },
-                    {
-                        "Round": 10,
-                        "Date": "Sunday 8 June",
-                        "Time": "5:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "56-50",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "Energy Events Centre, Rotorua"
-                    },
-                    {
-                        "Round": 10,
-                        "Date": "Monday 9 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "62-64",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 10,
-                        "Date": "Monday 9 June",
-                        "Time": "6:00 pm",
-                        "Home Team": "West Coast Fever",
-                        "Score": "draw 33-16",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Challenge Stadium, Perth"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 11,
-                        "Date": "Saturday 14 June",
-                        "Time": "2:30 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "47-48",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Trusts Stadium, Auckland"
-                    },
-                    {
-                        "Round": 11,
-                        "Date": "Sunday 15 June",
-                        "Time": "1:30 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "61-60",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "Sydney Olympic Park Sports Centre"
-                    },
-                    {
-                        "Round": 11,
-                        "Date": "Sunday 15 June",
-                        "Time": "5:30 pm",
-                        "Home Team": "Canterbury Tactix",
-                        "Score": "50-49",
-                        "Away Team": "Central Pulse",
-                        "Venue": "Westpac Centre, Christchurch"
-                    },
-                    {
-                        "Round": 11,
-                        "Date": "Monday 16 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "58-43",
-                        "Away Team": "West Coast Fever",
-                        "Venue": "Edgar Centre, Dunedin"
-                    },
-                    {
-                        "Round": 11,
-                        "Date": "Monday 16 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "47-40",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "State Netball and Hockey Centre,Melbourne"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 12,
-                        "Date": "Saturday 21 June",
-                        "Time": "2:30 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "41-46",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "TSB Bank Arena, Wellington"
-                    },
-                    {
-                        "Round": 12,
-                        "Date": "Saturday 21 June",
-                        "Time": "12:30 pm",
-                        "Home Team": "West Coast Fever",
-                        "Score": "48-54",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "Challenge Stadium, Perth"
-                    },
-                    {
-                        "Round": 12,
-                        "Date": "Sunday 22 June",
-                        "Time": "1:30 pm",
-                        "Home Team": "Queensland Firebirds",
-                        "Score": "50-36",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Brisbane Convention & Exhibition Centre"
-                    },
-                    {
-                        "Round": 12,
-                        "Date": "Monday 23 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "47-41",
-                        "Away Team": "Southern Steel",
-                        "Venue": "North Shore Events Centre, Auckland"
-                    },
-                    {
-                        "Round": 12,
-                        "Date": "Monday 23 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "51-41",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Sydney Olympic Park Sports Centre"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 13,
-                        "Date": "Saturday 28 June",
-                        "Time": "2:30 pm",
-                        "Home Team": "Northern Mystics",
-                        "Score": "42-28",
-                        "Away Team": "Central Pulse",
-                        "Venue": "North Shore Events Centre, Auckland"
-                    },
-                    {
-                        "Round": 13,
-                        "Date": "Saturday 28 June",
-                        "Time": "2:00 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "66-47",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "ETSA Park, Adelaide"
-                    },
-                    {
-                        "Round": 13,
-                        "Date": "Sunday 29 June",
-                        "Time": "11:30 am",
-                        "Home Team": "West Coast Fever",
-                        "Score": "50-44",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Challenge Stadium, Perth"
-                    },
-                    {
-                        "Round": 13,
-                        "Date": "Monday 30 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "47-43",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "Stadium Southland, Invercargill"
-                    },
-                    {
-                        "Round": 13,
-                        "Date": "Monday 30 June",
-                        "Time": "7:00 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "49-62",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Vodafone Arena, Melbourne"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 14,
-                        "Date": "Saturday 5 July",
-                        "Time": "2:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "69-44",
-                        "Away Team": "Canterbury Tactix",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    },
-                    {
-                        "Round": 14,
-                        "Date": "Sunday 6 July",
-                        "Time": "1:30 pm",
-                        "Home Team": "Melbourne Vixens",
-                        "Score": "56-47",
-                        "Away Team": "Northern Mystics",
-                        "Venue": "Vodafone Arena, Melbourne"
-                    },
-                    {
-                        "Round": 14,
-                        "Date": "Sunday 6 July",
-                        "Time": "5:30 pm",
-                        "Home Team": "Southern Steel",
-                        "Score": "54-52",
-                        "Away Team": "Queensland Firebirds",
-                        "Venue": "Edgar Centre, Dunedin"
-                    },
-                    {
-                        "Round": 14,
-                        "Date": "Monday 7 July",
-                        "Time": "7:00 pm",
-                        "Home Team": "Central Pulse",
-                        "Score": "32-44",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Pettigrew Green Arena, Napier"
-                    },
-                    {
-                        "Round": 14,
-                        "Date": "Monday 7 July",
-                        "Time": "6:00 pm",
-                        "Home Team": "West Coast Fever",
-                        "Score": "54-63",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Challenge Stadium, Perth"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 15,
-                        "Date": "Sunday 13 July",
-                        "Time": "5:30 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "56-57",
-                        "Away Team": "New South Wales Swifts",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    },
-                    {
-                        "Round": 15,
-                        "Date": "Monday 14 July",
-                        "Time": "4:30 pm",
-                        "Home Team": "Adelaide Thunderbirds",
-                        "Score": "53-48",
-                        "Away Team": "Melbourne Vixens",
-                        "Venue": "ETSA Park, Adelaide"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 16,
-                        "Date": "Monday 21 July",
-                        "Time": "7:00 pm",
-                        "Home Team": "Waikato Bay of Plenty Magic",
-                        "Score": "51-49",
-                        "Away Team": "Adelaide Thunderbirds",
-                        "Venue": "Mystery Creek Events Centre,Hamilton"
-                    }
-                ],
-                "byes": []
-            }
-        },
-        {
-            "round": {
-                "games": [
-                    {
-                        "Round": 17,
-                        "Date": "Monday 28 July",
-                        "Time": "7:00 pm",
-                        "Home Team": "New South Wales Swifts",
-                        "Score": "65-56",
-                        "Away Team": "Waikato Bay of Plenty Magic",
-                        "Venue": "Acer Arena, Sydney"
-                    }
-                ],
-                "byes": []
-            }
-        }
-    ]
+{"rounds":[
+{"round":
+	{
+	"games":[
+		{
+		"Round":"1",
+		"Date":"Saturday 5 April",
+		"Time":"2:30 pm",
+		"Home Team":"Central Pulse",
+		"Score":"33–50",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Sunday 6 April",
+		"Time":"1:00 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"48–46",
+		"Away Team":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Sunday 6 April",
+		"Time":"5:30 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"44–48",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Monday 7 April",
+		"Time":"7:00 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"46–42",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"1",
+		"Date":"Monday 7 April",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"53–42",
+		"Away Team":"Southern Steel"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"2",
+		"Date":"Saturday 12 April",
+		"Time":"2:30 pm",
+		"Home Team":"Canterbury Tactix",
+		"Score":"50–44",
+		"Away Team":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Sunday 13 April",
+		"Time":"1:30 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"62–52",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Sunday 13 April",
+		"Time":"5:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"56–52",
+		"Away Team":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Monday 14 April",
+		"Time":"7:00 pm",
+		"Home Team":"Central Pulse",
+		"Score":"50–52",
+		"Away Team":"Southern Steel"
+		}
+		,
+		{
+		"Round":"2",
+		"Date":"Monday 14 April",
+		"Time":"6:00 pm",
+		"Home Team":"West Coast Fever",
+		"Score":"41–54",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"3",
+		"Date":"Saturday 19 April",
+		"Time":"2:30 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"45–49",
+		"Away Team":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Saturday 19 April",
+		"Time":"2:30 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"50–47",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Sunday 20 April",
+		"Time":"1:30 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"38–39",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Monday 21 April",
+		"Time":"7:00 pm",
+		"Home Team":"Canterbury Tactix",
+		"Score":"42–51",
+		"Away Team":"Southern Steel"
+		}
+		,
+		{
+		"Round":"3",
+		"Date":"Monday 21 April",
+		"Time":"7:00 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"56–28",
+		"Away Team":"Central Pulse"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"4",
+		"Date":"Saturday 26 April",
+		"Time":"2:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"61–47",
+		"Away Team":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Saturday 26 April",
+		"Time":"2:30 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"46–40",
+		"Away Team":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Sunday 27 April",
+		"Time":"1:00 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"54–41",
+		"Away Team":"Southern Steel"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Monday 28 April",
+		"Time":"7:00 pm",
+		"Home Team":"Canterbury Tactix",
+		"Score":"50–58",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"4",
+		"Date":"Monday 28 April",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"59–30",
+		"Away Team":"Central Pulse"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"5",
+		"Date":"Saturday 3 May",
+		"Time":"2:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"54–37",
+		"Away Team":"Central Pulse"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Saturday 3 May",
+		"Time":"12:30 pm",
+		"Home Team":"West Coast Fever",
+		"Score":"46–65",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Monday 5 May",
+		"Time":"7:00 pm",
+		"Home Team":"Southern Steel",
+		"Score":"48–50",
+		"Away Team":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"5",
+		"Date":"Monday 5 May",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"52–53",
+		"Away Team":"Melbourne Vixens"
+		}
+	]
+	,
+	"Bye":" Adelaide Thunderbirds and Canterbury Tactix"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"6",
+		"Date":"Saturday 10 May",
+		"Time":"2:30 pm",
+		"Home Team":"Southern Steel",
+		"Score":"48–51",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Saturday 10 May",
+		"Time":"2:30 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"66–52",
+		"Away Team":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Monday 12 May",
+		"Time":"7:00 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"45–59",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"6",
+		"Date":"Monday 12 May",
+		"Time":"6:30 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"66–50",
+		"Away Team":"West Coast Fever"
+		}
+	]
+	,
+	"Bye":" Melbourne Vixens and Central Pulse"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"7",
+		"Date":"Saturday 17 May",
+		"Time":"2:30 pm",
+		"Home Team":"Central Pulse",
+		"Score":"50–55",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Sunday 18 May",
+		"Time":"1:00 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"46–52",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Monday 19 May",
+		"Time":"7:00 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"56–47",
+		"Away Team":"Southern Steel"
+		}
+		,
+		{
+		"Round":"7",
+		"Date":"Monday 19 May",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"66–54",
+		"Away Team":"West Coast Fever"
+		}
+	]
+	,
+	"Bye":" Queensland Firebirds and Northern Mystics"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"8",
+		"Date":"Saturday 24 May",
+		"Time":"2:30 pm",
+		"Home Team":"Canterbury Tactix",
+		"Score":"50–54",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Sunday 25 May",
+		"Time":"1:30 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"60–51",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Monday 26 May",
+		"Time":"7:00 pm",
+		"Home Team":"Central Pulse",
+		"Score":"48–54",
+		"Away Team":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"8",
+		"Date":"Monday 26 May",
+		"Time":"6:30 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"44–50",
+		"Away Team":"New South Wales Swifts"
+		}
+	]
+	,
+	"Bye":" West Coast Fever and Southern Steel"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"9",
+		"Date":"Saturday 31 May",
+		"Time":"2:30 pm",
+		"Home Team":"Southern Steel",
+		"Score":"41–29",
+		"Away Team":"Central Pulse"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Sunday 1 June",
+		"Time":"1:30 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"57–44",
+		"Away Team":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Monday 2 June",
+		"Time":"7:00 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"50–46",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"9",
+		"Date":"Monday 2 June",
+		"Time":"7:00 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"41–47",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":" New South Wales Swifts and Waikato Bay of Plenty Magic"
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"10",
+		"Date":"Saturday 7 June",
+		"Time":"2:30 pm",
+		"Home Team":"Southern Steel",
+		"Score":"47–46",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Sunday 8 June",
+		"Time":"1:00 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"61–41",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Sunday 8 June",
+		"Time":"5:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"56–50",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Monday 9 June",
+		"Time":"7:00 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"62–64",
+		"Away Team":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"10",
+		"Date":"Monday 9 June",
+		"Time":"6:00 pm",
+		"Home Team":"West Coast Fever",
+		"Score":"draw 33–16",
+		"Away Team":"Central Pulse"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"11",
+		"Date":"Saturday 14 June",
+		"Time":"2:30 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"47–48",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Sunday 15 June",
+		"Time":"1:30 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"61–60",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Sunday 15 June",
+		"Time":"5:30 pm",
+		"Home Team":"Canterbury Tactix",
+		"Score":"50–49",
+		"Away Team":"Central Pulse"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Monday 16 June",
+		"Time":"7:00 pm",
+		"Home Team":"Southern Steel",
+		"Score":"58–43",
+		"Away Team":"West Coast Fever"
+		}
+		,
+		{
+		"Round":"11",
+		"Date":"Monday 16 June",
+		"Time":"7:00 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"47–40",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"12",
+		"Date":"Saturday 21 June",
+		"Time":"2:30 pm",
+		"Home Team":"Central Pulse",
+		"Score":"41–46",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Saturday 21 June",
+		"Time":"12:30 pm",
+		"Home Team":"West Coast Fever",
+		"Score":"48–54",
+		"Away Team":"Melbourne Vixens"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Sunday 22 June",
+		"Time":"1:30 pm",
+		"Home Team":"Queensland Firebirds",
+		"Score":"50–36",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Monday 23 June",
+		"Time":"7:00 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"47–41",
+		"Away Team":"Southern Steel"
+		}
+		,
+		{
+		"Round":"12",
+		"Date":"Monday 23 June",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"51–41",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"13",
+		"Date":"Saturday 28 June",
+		"Time":"2:30 pm",
+		"Home Team":"Northern Mystics",
+		"Score":"42–28",
+		"Away Team":"Central Pulse"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Saturday 28 June",
+		"Time":"2:00 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"66–47",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Sunday 29 June",
+		"Time":"11:30 am",
+		"Home Team":"West Coast Fever",
+		"Score":"50–44",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Monday 30 June",
+		"Time":"7:00 pm",
+		"Home Team":"Southern Steel",
+		"Score":"47–43",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+		,
+		{
+		"Round":"13",
+		"Date":"Monday 30 June",
+		"Time":"7:00 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"49–62",
+		"Away Team":"New South Wales Swifts"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"14",
+		"Date":"Saturday 5 July",
+		"Time":"2:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"69–44",
+		"Away Team":"Canterbury Tactix"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Sunday 6 July",
+		"Time":"1:30 pm",
+		"Home Team":"Melbourne Vixens",
+		"Score":"56–47",
+		"Away Team":"Northern Mystics"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Sunday 6 July",
+		"Time":"5:30 pm",
+		"Home Team":"Southern Steel",
+		"Score":"54–52",
+		"Away Team":"Queensland Firebirds"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Monday 7 July",
+		"Time":"7:00 pm",
+		"Home Team":"Central Pulse",
+		"Score":"32–44",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+		,
+		{
+		"Round":"14",
+		"Date":"Monday 7 July",
+		"Time":"6:00 pm",
+		"Home Team":"West Coast Fever",
+		"Score":"54–63",
+		"Away Team":"New South Wales Swifts"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"15",
+		"Date":"Sunday 13 July",
+		"Time":"5:30 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"56-57",
+		"Away Team":"New South Wales Swifts"
+		}
+		,
+		{
+		"Round":"15",
+		"Date":"Monday 14 July",
+		"Time":"4:30 pm",
+		"Home Team":"Adelaide Thunderbirds",
+		"Score":"53-48",
+		"Away Team":"Melbourne Vixens"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"16",
+		"Date":"Monday 21 July",
+		"Time":"7:00 pm",
+		"Home Team":"Waikato Bay of Plenty Magic",
+		"Score":"51-49",
+		"Away Team":"Adelaide Thunderbirds"
+		}
+	]
+	,
+	"Bye":""
+	}
+},
+{"round":
+	{
+	"games":[
+		{
+		"Round":"17",
+		"Date":"Monday 28 July",
+		"Time":"7:00 pm",
+		"Home Team":"New South Wales Swifts",
+		"Score":"65-56",
+		"Away Team":"Waikato Bay of Plenty Magic"
+		}
+	]
+	,
+	"Bye":""
+	}
 }
+]}

@@ -33,7 +33,7 @@ foreach(@ARGV){
             my $inc2;
             print $fh "\t\{\n";
             print $fh "\t\"games\":\[\n";
-            for ($inc2 = $inc; $inc2 < $#round_data && !($line[1] =~ m/BYE/)
+            for ($inc2 = $inc; $inc2 <= $#round_data && !($line[1] =~ m/BYE/)
                 && $line[0] == $round;
                 @line = split(/,/, $round_data[++$inc2])){
                     print @line;
@@ -47,7 +47,7 @@ foreach(@ARGV){
                     print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
                     print $fh "\t\t\}\n";
                     if ($#round_data > $inc2+1){
-                        my @temp = split(/,/, $round_data[$inc2]);
+                        my @temp = split(/,/, $round_data[$inc2+1]);
                         if ($temp[0] == $round && !($temp[1] =~ m/BYES:/)){
                             print $fh "\t\t,\n";
                         }
