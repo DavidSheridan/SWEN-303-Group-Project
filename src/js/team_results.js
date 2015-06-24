@@ -7,6 +7,7 @@ onStartup();
 var dataset;
 var teams;
 var team;
+var pie;
 
 function onStartup(){
     d3.json("json/2008-Table1.json", function(data){
@@ -15,6 +16,7 @@ function onStartup(){
             teams = data.teams;
             team = constructEmptyWinStatisticsData("Adelaide Thunderbirds");
             calculateWinStatisticsData(dataset, team);
+            pie = constructPieChartData(team);
         });
     });
 }
@@ -65,6 +67,33 @@ function calculateWinStatisticsData(data, team){
             team.count = +team.count + 1;
         }
     }
+}
+
+/**
+ * Constructs an array which can be used to construct a pie chart
+ * which displays the specified data.
+ */
+function constructPieChartData(data){
+    var pieChart = {
+        data: [
+            {
+                fill: "red",
+                title: "wins",
+                value: (data.wins / data.count)
+            },
+            {
+                fill: "blue",
+                title: "loses",
+                value: (data.loses / data.count)
+            },
+            {
+                fill: "orange",
+                title: "draws",
+                value: (data.draws / data.count)
+            }
+        ]
+    };
+    return pieChart;
 }
 
 // helper methods
