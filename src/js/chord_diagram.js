@@ -1,5 +1,5 @@
 
-var matrix = [];
+var matrixData = [];
 var dataset = [];
 var teams = [];
 
@@ -9,32 +9,19 @@ function constructChordDiagram(){
         
         d3.json("json/teams.json", function(data){
             teams = data.teams;
-            matrix = createEmptyAdjacencyMatrix(teams.length);
-            populateAdjacencyMatrix(dataset, teams, matrix);
+            matrixData = createEmptyAdjacencyMatrix(teams.length);
+            populateAdjacencyMatrix(dataset, teams, matrixData);
             
-            var m = [
-                [0, 44, 61, 138, 85, 48, 113, 54, 91, 120],
-                [32, 0, 99, 33, 30, 76, 28, 79, 78, 16],
-                [41, 105, 0, 50, 50, 94, 36, 93, 94, 44],
-                [138, 50, 58, 0, 102, 56, 113, 46, 47, 111],
-                [101, 59, 44, 114, 0, 64, 113, 53, 172, 129],
-                [47, 96, 94, 47, 62, 0, 40, 97, 97, 45],
-                [88, 56, 50, 112, 125, 46, 0, 52, 50, 113],
-                [41, 93, 99, 47, 42, 89, 54, 0, 94, 58],
-                [97, 100, 123, 40, 159, 115, 56, 99, 0, 61],
-                [91, 33, 50, 92, 108, 49, 92, 43, 47, 0]
-            ];
-            
-            drawChordDiagram(m);
+            drawChordDiagram(matrixData);
         });
     });
 }
 
-function drawChordDiagram(matrix){
+function drawChordDiagram(data){
     var chord = d3.layout.chord()
         .padding(.05)
         .sortSubgroups(d3.descending)
-        .matrix(matrix);
+        .matrix(convertDataToMatrix(data));
         
     var width = 960;
     var height = 500;
@@ -137,7 +124,7 @@ function populateAdjacencyMatrix(data, teams, matrix){
             var away = games[game]["Away Team"];
             var homeIndex = convertTeamToInt(home, teams);
             var awayIndex = convertTeamToInt(away, teams);
-            
+                        
             // get points scored for each team
             var scores = getScores(games[game].Score);
             var homeScore = +scores[0];
@@ -145,7 +132,7 @@ function populateAdjacencyMatrix(data, teams, matrix){
 
             // update adjacency matrix with new data
             matrix[homeIndex][awayIndex].points = +matrix[homeIndex][awayIndex].points + +homeScore;
-            matrix[awayIndex][homeIndex].points = +matrix[awayIndex][homeIndex].points + +awayScore;             
+            matrix[awayIndex][homeIndex].points = +matrix[awayIndex][homeIndex].points + +awayScore;
         }
     }
 }
@@ -175,8 +162,21 @@ function getScores(score){
         score = score.substring(4);
     }
     var data = score.split("-");
-    return data;
-    
+    return data;    
+}
+
+/**
+ * Returns the specified data in the form of a number matrix
+ */
+function convertDataToMatrix(data){
+    matrix = [];
+    for(var i = 0; i < data.length; i++){
+        matrix[i] = [];
+        for(var j = 0; j < data[i].length; j++){
+            matrix[i][j] = +data[i][j].points;
+        }
+    }
+    return matrix;
 }
 
 /**
