@@ -9,15 +9,27 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         <script src="../js/menu.js" ></script>
-        <script src="../js/filter.js" ></script>
         <script src="../js/chord_diagram.js" ></script>
+        <script src="../js/filter.js" ></script>
 
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"> </script>
         
         <title>Win Statistics</title>
     </head>
+    
+    <style>
+        body {
+          font: 10px sans-serif;
+        }
 
-     <body>
+        .chord path {
+          fill-opacity: .67;
+          stroke: #000;
+          stroke-width: .5px;
+        }
+    </style>
+
+    <body>
         <div id="border">
             <!-- Menu js goes here -->
             <div id="menu" class="default">
@@ -34,13 +46,16 @@
             </div>
 
             <div id="win_stats" class="default">
+                <script type="text/javascript">
+                    constructChordDiagram();
+                </script>
             </div>
-            <div id="filters" class="default">
-            </div>     
             
-            <script type="text/javascript">
-                make_season_filter();
-            </script>
+            <div id="filters" class="default">
+                <script type="text/javascript">
+                    make_season_filter();
+                </script>
+            </div>     
         </div>
     </body>
 </html>
