@@ -23,10 +23,13 @@ foreach(@ARGV){
     print $fh "\{\"round\":\n";
     my $prev_round = -1;
     my @headers = split(/,/, $round_data[0]);
-    $headers[5] =~ s/\n//g;
+    $headers[5] =~ s/(\n|\r)//g;
     #print @headers;
     my $inc;
     my $round = 1;
+    for (my $i = 1; $i < $#round_data; $i++){
+        $round_data[$i] =~ s/\"//g;
+    }
     for ($inc = 1; $inc <= $#round_data && $round <= 17; $inc++){
         my @line = split(/,/, $round_data[$inc]);
         print @line;
