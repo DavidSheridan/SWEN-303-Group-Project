@@ -27,7 +27,7 @@ foreach(@ARGV){
     #print @headers;
     my $inc;
     my $round = 1;
-    for (my $i = 1; $i < $#round_data; $i++){
+    for (my $i = 1; $i <= $#round_data; $i++){
         $round_data[$i] =~ s/\"//g;
     }
     for ($inc = 1; $inc <= $#round_data && $round <= 17; $inc++){
@@ -43,11 +43,20 @@ foreach(@ARGV){
                     $line[5] =~ s/(\n|\")//g;
                     print $fh "\t\t\{\n";
                     print $fh "\t\t\"$headers[0]\":\"$line[0]\",\n";
-                    print $fh "\t\t\"$headers[1]\":\"$line[1]\",\n";
-                    print $fh "\t\t\"$headers[2]\":\"$line[2]\",\n";
-                    print $fh "\t\t\"$headers[3]\":\"$line[3]\",\n";
-                    print $fh "\t\t\"$headers[4]\":\"$line[4]\",\n";
-                    print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
+                    if ($line[2] =~ m/(pm|am)/){
+                        print $fh "\t\t\"$headers[1]\":\"$line[1],$line[2]\",\n";
+                        print $fh "\t\t\"$headers[2]\":\"$line[3]\",\n";
+                        print $fh "\t\t\"$headers[3]\":\"$line[4]\",\n";
+                        print $fh "\t\t\"$headers[4]\":\"$line[5]\",\n";
+                        print $fh "\t\t\"$headers[5]\":\"$line[6]\"\n";
+                    }
+                    else {
+                        print $fh "\t\t\"$headers[1]\":\"$line[1]\",\n";
+                        print $fh "\t\t\"$headers[2]\":\"$line[2]\",\n";
+                        print $fh "\t\t\"$headers[3]\":\"$line[3]\",\n";
+                        print $fh "\t\t\"$headers[4]\":\"$line[4]\",\n";
+                        print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
+                    }
                     print $fh "\t\t\}\n";
                     if ($#round_data > $inc2+1){
                         my @temp = split(/,/, $round_data[$inc2+1]);
