@@ -1,6 +1,8 @@
 var HOME_WON = -1;
 var AWAY_WON = 1;
 var DRAW = 0;
+var DURATION = 1500;
+var DELAY = 500;
 
 onStartup();
 
@@ -17,6 +19,7 @@ function onStartup(){
             team = constructEmptyWinStatisticsData("Adelaide Thunderbirds");
             calculateWinStatisticsData(dataset, team);
             pie = constructPieChartData(team);
+            drawPieChart(pie);
         });
     });
 }
@@ -79,21 +82,59 @@ function constructPieChartData(data){
             {
                 fill: "red",
                 title: "wins",
-                value: (data.wins / data.count)
+                value: data.wins
             },
             {
                 fill: "blue",
                 title: "loses",
-                value: (data.loses / data.count)
+                value: data.loses
             },
             {
                 fill: "orange",
                 title: "draws",
-                value: (data.draws / data.count)
+                value: data.draws
             }
         ]
     };
     return pieChart;
+}
+
+function drawPieChart(data){
+    var width = 460;
+    var height = 300;
+    var radius = Math.min(width, height) / 2;
+    
+    var pie = d3.layout.pie()
+        .sort(null);
+        
+    var fill = d3.scale.ordinal()
+        .domain(d3.range(10))
+        .range([data.data[0].fill, data.data[1].fill, data.data[2].fill]);
+    
+    var arc = d3.svg.arc()
+        .innerRadius(radius - 100)
+        .outerRadius(radius - 50);
+    
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+            .attr("transform", "translate(" + width / 2+", "+ height / 2 +")");
+    
+    var path = svg.selectAll("path")
+        .data(pie(constructPieChartDataArray(data)))
+            .enter()
+                .append("path")
+                    .attr("fill", function(d, i){return fill(i)})
+                    .attr("d", arc);
+                    
+    function constructPieChartDataArray(data){
+        var array = [];
+        for(var i = 0; i < data.data.length; i++){
+            array[i] = data.data[i].value;
+        }
+        return array;
+    }
 }
 
 // helper methods
