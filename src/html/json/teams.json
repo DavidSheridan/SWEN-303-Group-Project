@@ -1,34 +1,44 @@
 {
     "teams": [
         {
-            "team": "Adelaide Thunderbirds"
+            "team": "Adelaide Thunderbirds",
+            "fill": "#FF00FF"
         },
         {
-            "team": "Central Pulse"
+            "team": "Central Pulse",
+            "fill": "#FFFF00"
         },
         {
-            "team": "Canterbury Tactix"
+            "team": "Canterbury Tactix",
+            "fill": "#800033"
         },
         {
-            "team": "Melbourne Vixens"
+            "team": "Melbourne Vixens",
+            "fill": "#003366"
         },
         {
-            "team": "New South Wales Swifts"
+            "team": "New South Wales Swifts",
+            "fill": "#FF0000"
         },
         {
-            "team": "Northern Mystics"
+            "team": "Northern Mystics",
+            "fill": "#0066FF"
         },
         {
-            "team": "Queensland Firebirds"
+            "team": "Queensland Firebirds",
+            "fill": "#993399"
         },
         {
-            "team": "Southern Steel"
+            "team": "Southern Steel",
+            "fill": "#33CCFF"
         },
         {
-            "team": "Waikato Bay of Plenty Magic"
+            "team": "Waikato Bay of Plenty Magic",
+            "fill": "#808033"
         },
         {
-            "team": "West Coast Fever"
+            "team": "West Coast Fever",
+            "fill": "#004C4C"
         }
     ]
 }
