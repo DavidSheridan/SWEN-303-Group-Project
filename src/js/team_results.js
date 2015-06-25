@@ -202,9 +202,14 @@ function drawPieChart(data){
                     .attr("opacity", 0.63)
                     .attr("stroke", "black")
                     .attr("d", arc)
-                    .on("mouseover", function(d){
+                    .on("mouseover", function(d, i){
                             d3.select(this).transition().style("opacity", 1);
-                            drawSecondaryPieChart(constructPieChartWinsData(team.teams));
+                            if(i == 0){
+                                drawSecondaryPieChart(constructPieChartWinsData(team.teams));
+                            }
+                            else{
+                                drawSecondaryPieChart(constructPieChartLoseData(team.teams));
+                            }
                         })
                     .on("mouseout", function(d){
                             d3.select(this).transition().style("opacity", 0.63);
