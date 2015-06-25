@@ -126,7 +126,11 @@ function drawPieChart(data){
             .enter()
                 .append("path")
                     .attr("fill", function(d, i){return fill(i)})
-                    .attr("d", arc);
+                    .attr("opacity", 0.63)
+                    .attr("stroke", "black")
+                    .attr("d", arc)
+                    .on("mouseover", function(d)(d3.select(this).transition().style("opacity", 1)))
+                    .on("mouseout", function(d)(d3.select(this).transition().style("opacity", 0.63)));
                     
     function constructPieChartDataArray(data){
         var array = [];
@@ -134,6 +138,15 @@ function drawPieChart(data){
             array[i] = data.data[i].value;
         }
         return array;
+    }
+    
+    function fade(opacity, svg){
+        return function(g, i){
+            svg.selectAll("path")
+                .filter(function(d){color == fill(i)})
+                .transition()
+                    .style("opacity", opacity);
+        };
     }
 }
 
