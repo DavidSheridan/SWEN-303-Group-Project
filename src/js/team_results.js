@@ -20,6 +20,7 @@ function onStartup(){
             calculateWinStatisticsData(dataset, team);
             pie = constructPieChartData(team);
             drawPieChart(pie);
+            drawLineChart(team);
         });
     });
 }
@@ -136,6 +137,73 @@ function drawPieChart(data){
         var array = [];
         for(var i = 0; i < data.data.length; i++){
             array[i] = data.data[i].value;
+        }
+        return array;
+    }
+}
+
+function drawLineChart(data){
+    var margin = {top: 20, right: 20, bottom: 30, left: 50};
+    var width = 960 - margin.left - margin.right;
+    var height = 500 - margin.top - margin.bottom;
+    
+    var x = d3.scale.linear()
+        .range([0, width]);
+        
+    var y = d3.scale.linear()
+        .range([height, 0]);
+    
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+        
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+    
+    var line = d3.svg.line()
+        .x(function(d){return x(d.game)})
+        .y(function(d){return y(d.points)});
+    
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform", "translate(" + margin.left + ", " + margin.right +")");
+            
+    var lineChartData = constructLineChartData(data);
+    console.log(lineChartData);
+    
+    x.domain(d3.extent(lineChartData, function(d){return d.game;}));
+    y.domain(d3.extent(lineChartData, function(d){return d.points;}));
+    
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0, " + height + ")")
+        .call(xAxis);
+        
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+            .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text("Points Scored");
+    
+    svg.append("path")
+        .datum(lineChartData)
+        .attr("class", "line")
+        .attr("d", line);
+    
+    function constructLineChartData(data){
+        var array = [];
+        for(var i = 0; i < data.points.length; i++){
+            array[i] = {
+              points: data.points[i],
+              game: i + 1
+            };
         }
         return array;
     }
