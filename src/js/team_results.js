@@ -139,15 +139,6 @@ function drawPieChart(data){
         }
         return array;
     }
-    
-    function fade(opacity, svg){
-        return function(g, i){
-            svg.selectAll("path")
-                .filter(function(d){color == fill(i)})
-                .transition()
-                    .style("opacity", opacity);
-        };
-    }
 }
 
 // helper methods
