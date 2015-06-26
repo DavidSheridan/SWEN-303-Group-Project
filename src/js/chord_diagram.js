@@ -23,8 +23,8 @@ function drawChordDiagram(data){
         .sortSubgroups(d3.descending)
         .matrix(convertDataToMatrix(data));
         
-    var width = 960;
-    var height = 500;
+    var width = 450;
+    var height = 450;
     var innerRadius = Math.min(width, height) * 0.41;
     var outerRadius = innerRadius * 1.1;
     
@@ -33,6 +33,13 @@ function drawChordDiagram(data){
         .range(["#FF00FF", "#FFFF00", "#800033", "#003366", "#FF0000", "#0066FF", "#993399", "#33CCFF", "#808033", "#004C4C"]);
     
     var svg = d3.select("#win_stats").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
+    
+    var text = d3.select("#win_stats").append("svg")
+        .attr("class", "chord-text")
         .attr("width", width)
         .attr("height", height)
         .append("g")
@@ -80,7 +87,7 @@ function drawChordDiagram(data){
                 .enter()
                     .append("path")
                         .attr("d", d3.svg.chord().radius(innerRadius))
-                        .style("fill", function(d){return fill(d.target.index);})
+                        .style("fill", function(d){return fill(d.source.index);})
                         .style("opacity", 1);
 }
 
