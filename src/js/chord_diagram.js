@@ -32,7 +32,7 @@ function drawChordDiagram(data){
         .domain(d3.range(10))
         .range(["#FF00FF", "#FFFF00", "#800033", "#003366", "#FF0000", "#0066FF", "#993399", "#33CCFF", "#808033", "#004C4C"]);
     
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#win_stats").append("svg")
         .attr("width", width)
         .attr("height", height)
         .append("g")
