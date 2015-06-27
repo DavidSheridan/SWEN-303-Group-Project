@@ -135,7 +135,8 @@ function make_finals_graph_data (data){
 	var rounds = [];
 	for (; i < data.length; i++){
 		var j = 0;
-			if (Number(data[i].round.games[j].Round) >= 15){
+			if (data[i].round.games.length > 0 &&
+				Number(data[i].round.games[j].Round) >= 15){
 				rounds.push(data[i].round);
 			}
 	}
@@ -291,6 +292,12 @@ function find_and_link(links, nodes){
 				if (links[j].target.indexOf("semifinals")  > -1 &&
 					links[j].source.indexOf(temp[0]) > -1){
 					console.log(links[j].target +" "+temp[1]);
+					for (var q = 0; q < links.length; q++){
+						if (links[j].target.indexOf("semifinals")  > -1 &&
+							links[j].source.indexOf(temp[1]) > -1){
+							return find_and_link_finals(links, nodes);
+						}
+					}
 					return {
 						"source":temp[1],
 						"target":links[j].target,
@@ -298,6 +305,35 @@ function find_and_link(links, nodes){
 					}
 				}
 				if (links[j].target.indexOf("semifinals")  > -1 &&
+					links[j].source.indexOf(temp[1]) > -1){
+					console.log(links[j].target +" "+temp[0]);
+					return {
+						"source":temp[0],
+						"target":links[j].target,
+						"value":"2"
+					}
+				}
+			}
+		}
+	}
+}
+
+function find_and_link_finals(links, nodes){
+	for (var i = 0; i < nodes.length; i++){
+		if (nodes[i].name.indexOf("semifinals") > -1){
+			var temp = nodes[i].played.split("vs");
+			console.log(temp);
+			for (var j = 0; j < links.length; j++){
+				if (links[j].target.indexOf("finals")  > -1 &&
+					links[j].source.indexOf(temp[0]) > -1){
+					console.log(links[j].target +" "+temp[1]);
+					return {
+						"source":temp[1],
+						"target":links[j].target,
+						"value":"2"
+					}
+				}
+				if (links[j].target.indexOf("finals")  > -1 &&
 					links[j].source.indexOf(temp[1]) > -1){
 					console.log(links[j].target +" "+temp[0]);
 					return {
