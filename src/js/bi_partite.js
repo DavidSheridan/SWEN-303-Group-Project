@@ -1,6 +1,6 @@
 !function(){
 	var bP={};	
-	var b=30, bb=150, height=600, buffMargin=1, minHeight=14;
+	var b=30, bb=150, height=700, buffMargin=1, minHeight=14;
 	var c1=[-130, 40], c2=[-50, 100], c3=[-10, 140]; //Column positions of labels.
 	var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#0099C6",
 				"#336633", "#9933CC", "#CCCC33", "#FF66CC","#9966FF","#CCCCFF",
@@ -290,7 +290,7 @@ function bi_partite(filename){
 	d3.json(filename, function (error, data) {
 		var data = parse_bi_partite_data(data.rounds);
 
-		var width = 1100, height = 610, margin ={b:0, t:40, l:170, r:50};
+		var width = 1100, height = 710, margin ={b:0, t:40, l:170, r:50};
 
 		var svg = d3.select("#bi_partite_border")
 			.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
@@ -325,12 +325,18 @@ function parse_bi_partite_data(data){
 
 function add_to_away_data(game, data){
 	var is_found = false;
-	var temp = game.Score.split("–");
+	var temp;
+	if (game.Score.indexOf('–') > -1){
+		temp = game.Score.split('–');
+	}
+	else {
+		temp = game.Score.split('-');
+	}
 	for (var i = 0; i < data.away.length; i++){
 		if (data.away.length > 0 && 
 			data.away[i][0].indexOf(game.Venue) > -1 &&
 			data.away[i][1].indexOf(game["Away Team"]) > -1){
-			data.away[i][2] += temp[0];
+			data.away[i][2] += Number(temp[0]);
 			is_found = true;
 		}
 	}
@@ -338,20 +344,27 @@ function add_to_away_data(game, data){
 		data.away.push.apply(data.away,[[
 			game.Venue,
 			game["Away Team"],
-			temp[1]
+			Number(temp[1])
 			]]);
+		console.log(Number(temp[1]));
 	}
 	return data;
 }
 function add_to_home_data(game, data){
 	var is_found = false;
-	var temp = game.Score.split('–');
+	var temp;
+	if (game.Score.indexOf('–') > -1){
+		temp = game.Score.split('–');
+	}
+	else {
+		temp = game.Score.split('-');
+	}
 	console.log(game);
 	for (var i = 0; i < data.home.length; i++){
 		if (data.home.length > 0 && 
 			data.home[i][0].indexOf(game.Venue) > -1 &&
 			data.home[i][1].indexOf(game["Home Team"]) > -1){
-			data.home[i][2] += temp[0];
+			data.home[i][2] += Number(temp[0]);
 			is_found = true;
 		}
 	}
@@ -359,9 +372,9 @@ function add_to_home_data(game, data){
 		data.home.push.apply(data.home,[[
 			game.Venue,
 			game["Home Team"],
-			temp[0]
+			Number(temp[0])
 			]]);
-		console.log(data.home);
+		console.log(Number(temp[0]));
 	}
 	return data;
 }
