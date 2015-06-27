@@ -2,6 +2,8 @@
     <head>
     	<meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/filter.css">
@@ -33,6 +35,12 @@
             </div>
 
             <div id="home_vs_away" class="default">
+                <div id="bi_partite_border"></div>
+                <script type="text/javascript" src="../js/bi_partite.js">
+                </script>
+                <script type="text/javascript">
+                    bi_partite("json/2011-Table1.json");
+                </script>
             </div>
             <div id="filters" class="default">
             </div>     
