@@ -1,5 +1,5 @@
 function make_finals_graph(data){
-	var units = "Widgets";
+	var units = "";
 	 
 	var margin = {top: 10, right: 40, bottom: 10, left: 10},
 	    width = 900 - margin.left - margin.right,
@@ -10,7 +10,7 @@ function make_finals_graph(data){
 	    color = d3.scale.category20();
 	 
 	// append the svg canvas to the page
-	var svg = d3.select("#finals_graph").append("svg")
+	var svg = d3.select("#graph_border").append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -78,7 +78,7 @@ function make_finals_graph(data){
 			  return d3.rgb(d.color).darker(2); })
 	    .append("title")
 	      .text(function(d) { 
-			  return d.name + "\n" + format(d.value); });
+			  return d.name;});// + "\n" + format(d.value); });
 	 
 	// add in the title for the nodes
 	  node.append("text")
@@ -87,7 +87,7 @@ function make_finals_graph(data){
 	      .attr("dy", ".35em")
 	      .attr("text-anchor", "end")
 	      .attr("transform", null)
-	      .text(function(d) { return d.name; })
+	      .text(function(d) { return d.who; })
 	    .filter(function(d) { return d.x < width / 2; })
 	      .attr("x", 6 + sankey.nodeWidth())
 	      .attr("text-anchor", "start");
@@ -104,3 +104,212 @@ function make_finals_graph(data){
 	    link.attr("d", path);
 	  }
 }
+
+/**
+ *Redraw the graph with new values
+**/
+function update_finals_graph (filename){
+	d3.json("json/"+filename, function(error, data){
+		d3.select('#graph_border')
+			.remove();
+		d3.select('#finals_graph')
+			.append('div')
+			.attr('id', 'graph_border');
+
+		data = make_finals_graph_data(data.rounds);
+		make_finals_graph(data);
+
+	});
+}
+
+function make_finals_graph_data (data){
+	var temp = {
+		"links":[
+		],
+		"nodes":[
+		]
+	};
+
+	var i = 0;
+	var points = 1;
+	var rounds = [];
+	for (; i < data.length; i++){
+		var j = 0;
+			if (Number(data[i].round.games[j].Round) >= 15){
+				rounds.push(data[i].round);
+			}
+	}
+	console.log(rounds);
+	for (i = rounds.length -1; i >= 0; i--){
+		for (var j = rounds[i].games.length-1; j >= 0; j--){
+			var round_number = 0;
+			if (Number(rounds[i].games[j].Round) == 17){
+				console.log("This");
+				var game = rounds[i].games[j];
+				if (determineWinner(game.Score) == (-1)){
+					temp.nodes.push({
+						"name":"finals",
+						"who":game["Home Team"],
+						"played":game["Home Team"] + "vs" + game["Away Team"]
+					});
+				}
+				else {
+					temp.nodes.push({
+						"name":"finals",
+						"who":game["Away Team"],
+						"played":game["Home Team"] + "vs" + game["Away Team"]
+					});
+				}
+			}
+			if (Number(rounds[i].games[j].Round) == 16){
+				var game = rounds[i].games[j];
+				console.log("Then This");
+				if (determineWinner(game.Score) == (-1)){
+					temp.links.push({
+						"source":"semifinals"+round_number,
+						"target":"finals",
+						"value":"4"
+					});
+					temp.nodes.push({
+						"name":"semifinals"+round_number,
+						"who":game["Home Team"],
+						"played":game["Home Team"] + "vs" + game["Away Team"]
+					});
+					console.log(game["Home Team"] + "vs" + game["Away Team"]);
+				}
+				else {
+					temp.links.push({
+						"source":"semifinals"+round_number,
+						"target":"finals",
+						"value":"3"
+					});
+					temp.nodes.push({
+						"name":"semifinals"+round_number,
+						"who":game["Away Team"],
+						"played":game["Home Team"] + "vs" + game["Away Team"]
+					});
+				}
+			}
+			if (Number(rounds[i].games[j].Round) == 15){
+				var game = rounds[i].games[j];
+				console.log("And Then This");
+				if (determineWinner(game.Score) == (-1)){
+					temp.links.push({
+						"source":game["Home Team"],
+						"target":game["Home Team"] + " vs "+game["Away Team"],
+						"value":"2"
+					});
+					temp.links.push({
+						"source":game["Away Team"],
+						"target":game["Home Team"] + " vs "+game["Away Team"],
+						"value":"2"
+					});
+					temp.links.push({
+						"source":game["Home Team"] + " vs "+game["Away Team"],
+						"target":find_target(game["Home Team"], temp.nodes),
+						"value":"2"
+					});
+					temp.nodes.push({
+						"name":game["Home Team"],
+						"who":game["Home Team"],
+						"played":""
+					});
+					temp.nodes.push({
+						"name":game["Away Team"],
+						"who":game["Away Team"],
+						"played":""
+					});
+					temp.nodes.push({
+						"name":game["Home Team"] + " vs "+game["Away Team"],
+						"who":game["Home Team"],
+						"played":game["Home Team"] + " vs "+game["Away Team"]
+					});
+				}
+				else {
+					temp.links.push({
+						"source":game["Home Team"],
+						"target":game["Home Team"] + " vs "+game["Away Team"],
+						"value":"2"
+					});
+					temp.links.push({
+						"source":game["Away Team"],
+						"target":game["Home Team"] + " vs "+game["Away Team"],
+						"value":"2"
+					});
+					temp.links.push({
+						"source":game["Home Team"] + " vs "+game["Away Team"],
+						"target":find_target(game["Away Team"], temp.nodes),
+						"value":"2"
+					});
+					temp.nodes.push({
+						"name":game["Home Team"],
+						"who":game["Home Team"],
+						"played":""
+					});
+					temp.nodes.push({
+						"name":game["Away Team"],
+						"who":game["Away Team"],
+						"played":""
+					});
+					temp.nodes.push({
+						"name":game["Home Team"] + " vs "+game["Away Team"],
+						"who":game["Away Team"],
+						"played":game["Home Team"] + " vs "+game["Away Team"]
+					});
+				}
+			}
+		}
+	}
+	temp.links.push(find_and_link(temp.links, temp.nodes));
+	console.log(temp);
+	return temp;
+}
+
+function find_target(team_name, nodes){
+	var target;
+	for (var i = 0; i < nodes.length; i++){
+		if (nodes[i].name.indexOf("semifinals") > -1 && 
+			nodes[i].played.indexOf(team_name) > -1){
+			return nodes[i].name;
+		}
+	}
+	for (var i = 0; i < nodes.length; i++){
+		if (nodes[i].name.indexOf("finals") > -1 && 
+			nodes[i].played.indexOf(team_name) > -1){
+			return nodes[i].name;
+		}
+	}
+	return target;
+}
+
+function find_and_link(links, nodes){
+	for (var i = 0; i < nodes.length; i++){
+		if (nodes[i].name.indexOf("semifinals") > -1){
+			var temp = nodes[i].played.split("vs");
+			console.log(temp);
+			for (var j = 0; j < links.length; j++){
+				if (links[j].target.indexOf("semifinals")  > -1 &&
+					links[j].source.indexOf(temp[0]) > -1){
+					console.log(links[j].target +" "+temp[1]);
+					return {
+						"source":temp[1],
+						"target":links[j].target,
+						"value":"2"
+					}
+				}
+				if (links[j].target.indexOf("semifinals")  > -1 &&
+					links[j].source.indexOf(temp[1]) > -1){
+					console.log(links[j].target +" "+temp[0]);
+					return {
+						"source":temp[0],
+						"target":links[j].target,
+						"value":"2"
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
