@@ -20,7 +20,7 @@ function constructChordDiagram(year){
 
 function redraw(year){
     document.getElementById("win_stats").innerHTML="";
-  document.getElementById("title").innerHTML="<h2>Win Statistics for the year "+year+"</h2>"
+    document.getElementById("title").innerHTML="<h2>Win Statistics for the year "+year+"</h2>"
 }
 
 function drawChordDiagram(data){

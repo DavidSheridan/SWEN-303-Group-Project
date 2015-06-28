@@ -121,17 +121,19 @@
 			.style("stroke","black").style("stroke-opacity",0);
 			
 		mainbar.append("text").attr("class","barlabel")
-			.attr("x", c1[p]).attr("y",function(d){ return d.middle+5;})
+			.attr("x", c1[p]-50).attr("y",function(d){ return d.middle+5;})
 			.text(function(d,i){ return data.keys[p][i];})
 			.attr("text-anchor","start" );
 			
 		mainbar.append("text").attr("class","barvalue")
 			.attr("x", c2[p]).attr("y",function(d){ return d.middle+5;})
+			.style("font-color", "#000000")
 			.text(function(d,i){ return d.value ;})
 			.attr("text-anchor","end");
 			
 		mainbar.append("text").attr("class","barpercent")
 			.attr("x", c3[p]).attr("y",function(d){ return d.middle+5;})
+			.style("font-color", "#000000")
 			.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;})
 			.attr("text-anchor","end").style("fill","grey");
 			
@@ -161,10 +163,10 @@
 			var h = d3.select("#"+id).select(".part"+d).append("g").attr("class","header");
 			
 			h.append("text").text(header[d]).attr("x", (c1[d]-5))
-				.attr("y", -5).style("fill","grey");
+				.attr("y", -5).style("fill","black");
 			
 			h.append("text").text("Count").attr("x", (c2[d]-10))
-				.attr("y", -5).style("fill","grey");
+				.attr("y", -5).style("fill","black");
 			
 			h.append("line").attr("x1",c1[d]-10).attr("y1", -2)
 				.attr("x2",c3[d]+10).attr("y2", -2).style("stroke","black")

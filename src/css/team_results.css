@@ -3,11 +3,13 @@ body {
   margin: auto;
   position: relative;
   width: 960px;
+  font-color: #000;
 }
 
 text {
 	font-size: 10px;
   	font-family: Arial, Helvetica, sans-serif;
+
 }
 
 form {
