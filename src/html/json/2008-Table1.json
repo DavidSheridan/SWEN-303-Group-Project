@@ -7,8 +7,9 @@
 		"Date":"Saturday 5 April",
 		"Time":"2:30 pm",
 		"Home Team":"Central Pulse",
-		"Score":"33–50",
-		"Away Team":"Melbourne Vixens"
+		"Score":"33-50",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"TSB Bank Arena"
 		}
 		,
 		{
@@ -16,8 +17,9 @@
 		"Date":"Sunday 6 April",
 		"Time":"1:00 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"48–46",
-		"Away Team":"West Coast Fever"
+		"Score":"48-46",
+		"Away Team":"West Coast Fever",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 		,
 		{
@@ -25,8 +27,9 @@
 		"Date":"Sunday 6 April",
 		"Time":"5:30 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"44–48",
-		"Away Team":"Canterbury Tactix"
+		"Score":"44-48",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -34,8 +37,9 @@
 		"Date":"Monday 7 April",
 		"Time":"7:00 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"46–42",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"46-42",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Energy Events Centre"
 		}
 		,
 		{
@@ -43,8 +47,9 @@
 		"Date":"Monday 7 April",
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"53–42",
-		"Away Team":"Southern Steel"
+		"Score":"53-42",
+		"Away Team":"Southern Steel",
+		"Venue":"Acer Arena"
 		}
 	]
 	,
@@ -59,8 +64,9 @@
 		"Date":"Saturday 12 April",
 		"Time":"2:30 pm",
 		"Home Team":"Canterbury Tactix",
-		"Score":"50–44",
-		"Away Team":"New South Wales Swifts"
+		"Score":"50-44",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Westpac Centre"
 		}
 		,
 		{
@@ -68,8 +74,9 @@
 		"Date":"Sunday 13 April",
 		"Time":"1:30 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"62–52",
-		"Away Team":"Queensland Firebirds"
+		"Score":"62-52",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"State Netball and Hockey Centre"
 		}
 		,
 		{
@@ -77,8 +84,9 @@
 		"Date":"Sunday 13 April",
 		"Time":"5:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"56–52",
-		"Away Team":"Northern Mystics"
+		"Score":"56-52",
+		"Away Team":"Northern Mystics",
+		"Venue":"Energy Events Centre"
 		}
 		,
 		{
@@ -86,8 +94,9 @@
 		"Date":"Monday 14 April",
 		"Time":"7:00 pm",
 		"Home Team":"Central Pulse",
-		"Score":"50–52",
-		"Away Team":"Southern Steel"
+		"Score":"50-52",
+		"Away Team":"Southern Steel",
+		"Venue":"TSB Bank Arena"
 		}
 		,
 		{
@@ -95,8 +104,9 @@
 		"Date":"Monday 14 April",
 		"Time":"6:00 pm",
 		"Home Team":"West Coast Fever",
-		"Score":"41–54",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"41-54",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Challenge Stadium"
 		}
 	]
 	,
@@ -111,8 +121,9 @@
 		"Date":"Saturday 19 April",
 		"Time":"2:30 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"45–49",
-		"Away Team":"West Coast Fever"
+		"Score":"45-49",
+		"Away Team":"West Coast Fever",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -120,8 +131,9 @@
 		"Date":"Saturday 19 April",
 		"Time":"2:30 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"50–47",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"50-47",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"Newcastle Entertainment Centre"
 		}
 		,
 		{
@@ -129,8 +141,9 @@
 		"Date":"Sunday 20 April",
 		"Time":"1:30 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"38–39",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"38-39",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Vodafone Arena"
 		}
 		,
 		{
@@ -138,8 +151,9 @@
 		"Date":"Monday 21 April",
 		"Time":"7:00 pm",
 		"Home Team":"Canterbury Tactix",
-		"Score":"42–51",
-		"Away Team":"Southern Steel"
+		"Score":"42-51",
+		"Away Team":"Southern Steel",
+		"Venue":"Westpac Arena"
 		}
 		,
 		{
@@ -147,8 +161,9 @@
 		"Date":"Monday 21 April",
 		"Time":"7:00 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"56–28",
-		"Away Team":"Central Pulse"
+		"Score":"56-28",
+		"Away Team":"Central Pulse",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 	]
 	,
@@ -163,8 +178,9 @@
 		"Date":"Saturday 26 April",
 		"Time":"2:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"61–47",
-		"Away Team":"West Coast Fever"
+		"Score":"61-47",
+		"Away Team":"West Coast Fever",
+		"Venue":"Mystery Creek Events Centre"
 		}
 		,
 		{
@@ -172,8 +188,9 @@
 		"Date":"Saturday 26 April",
 		"Time":"2:30 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"46–40",
-		"Away Team":"Northern Mystics"
+		"Score":"46-40",
+		"Away Team":"Northern Mystics",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 		,
 		{
@@ -181,8 +198,9 @@
 		"Date":"Sunday 27 April",
 		"Time":"1:00 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"54–41",
-		"Away Team":"Southern Steel"
+		"Score":"54-41",
+		"Away Team":"Southern Steel",
+		"Venue":"ETSA Park"
 		}
 		,
 		{
@@ -190,8 +208,9 @@
 		"Date":"Monday 28 April",
 		"Time":"7:00 pm",
 		"Home Team":"Canterbury Tactix",
-		"Score":"50–58",
-		"Away Team":"Melbourne Vixens"
+		"Score":"50-58",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"Westpac Arena"
 		}
 		,
 		{
@@ -199,8 +218,9 @@
 		"Date":"Monday 28 April",
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"59–30",
-		"Away Team":"Central Pulse"
+		"Score":"59-30",
+		"Away Team":"Central Pulse",
+		"Venue":"Sydney Olympic Park Sports Centre"
 		}
 	]
 	,
@@ -215,8 +235,9 @@
 		"Date":"Saturday 3 May",
 		"Time":"2:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"54–37",
-		"Away Team":"Central Pulse"
+		"Score":"54-37",
+		"Away Team":"Central Pulse",
+		"Venue":"Mystery Creek Events Centre"
 		}
 		,
 		{
@@ -224,8 +245,9 @@
 		"Date":"Saturday 3 May",
 		"Time":"12:30 pm",
 		"Home Team":"West Coast Fever",
-		"Score":"46–65",
-		"Away Team":"Queensland Firebirds"
+		"Score":"46-65",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"Challenge Stadium"
 		}
 		,
 		{
@@ -233,8 +255,9 @@
 		"Date":"Monday 5 May",
 		"Time":"7:00 pm",
 		"Home Team":"Southern Steel",
-		"Score":"48–50",
-		"Away Team":"Northern Mystics"
+		"Score":"48-50",
+		"Away Team":"Northern Mystics",
+		"Venue":"Stadium Southland"
 		}
 		,
 		{
@@ -242,8 +265,9 @@
 		"Date":"Monday 5 May",
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"52–53",
-		"Away Team":"Melbourne Vixens"
+		"Score":"52-53",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"Newcastle Entertainment Centre"
 		}
 	]
 	,
@@ -258,8 +282,9 @@
 		"Date":"Saturday 10 May",
 		"Time":"2:30 pm",
 		"Home Team":"Southern Steel",
-		"Score":"48–51",
-		"Away Team":"Canterbury Tactix"
+		"Score":"48-51",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Stadium Southland"
 		}
 		,
 		{
@@ -267,8 +292,9 @@
 		"Date":"Saturday 10 May",
 		"Time":"2:30 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"66–52",
-		"Away Team":"New South Wales Swifts"
+		"Score":"66-52",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 		,
 		{
@@ -276,8 +302,9 @@
 		"Date":"Monday 12 May",
 		"Time":"7:00 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"45–59",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"45-59",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -285,8 +312,9 @@
 		"Date":"Monday 12 May",
 		"Time":"6:30 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"66–50",
-		"Away Team":"West Coast Fever"
+		"Score":"66-50",
+		"Away Team":"West Coast Fever",
+		"Venue":"ETSA Park"
 		}
 	]
 	,
@@ -301,8 +329,9 @@
 		"Date":"Saturday 17 May",
 		"Time":"2:30 pm",
 		"Home Team":"Central Pulse",
-		"Score":"50–55",
-		"Away Team":"Canterbury Tactix"
+		"Score":"50-55",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Arena Manawatu"
 		}
 		,
 		{
@@ -310,8 +339,9 @@
 		"Date":"Sunday 18 May",
 		"Time":"1:00 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"46–52",
-		"Away Team":"Melbourne Vixens"
+		"Score":"46-52",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"ETSA Park"
 		}
 		,
 		{
@@ -319,8 +349,9 @@
 		"Date":"Monday 19 May",
 		"Time":"7:00 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"56–47",
-		"Away Team":"Southern Steel"
+		"Score":"56-47",
+		"Away Team":"Southern Steel",
+		"Venue":"Mystery Creek Events Centre"
 		}
 		,
 		{
@@ -328,8 +359,9 @@
 		"Date":"Monday 19 May",
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"66–54",
-		"Away Team":"West Coast Fever"
+		"Score":"66-54",
+		"Away Team":"West Coast Fever",
+		"Venue":"Sydney Olympic Park Sports Centre"
 		}
 	]
 	,
@@ -344,8 +376,9 @@
 		"Date":"Saturday 24 May",
 		"Time":"2:30 pm",
 		"Home Team":"Canterbury Tactix",
-		"Score":"50–54",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"50-54",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"Westpac Arena"
 		}
 		,
 		{
@@ -353,8 +386,9 @@
 		"Date":"Sunday 25 May",
 		"Time":"1:30 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"60–51",
-		"Away Team":"Melbourne Vixens"
+		"Score":"60-51",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 		,
 		{
@@ -362,8 +396,9 @@
 		"Date":"Monday 26 May",
 		"Time":"7:00 pm",
 		"Home Team":"Central Pulse",
-		"Score":"48–54",
-		"Away Team":"Northern Mystics"
+		"Score":"48-54",
+		"Away Team":"Northern Mystics",
+		"Venue":"TSB Bank Arena"
 		}
 		,
 		{
@@ -371,8 +406,9 @@
 		"Date":"Monday 26 May",
 		"Time":"6:30 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"44–50",
-		"Away Team":"New South Wales Swifts"
+		"Score":"44-50",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"ETSA Park"
 		}
 	]
 	,
@@ -387,8 +423,9 @@
 		"Date":"Saturday 31 May",
 		"Time":"2:30 pm",
 		"Home Team":"Southern Steel",
-		"Score":"41–29",
-		"Away Team":"Central Pulse"
+		"Score":"41-29",
+		"Away Team":"Central Pulse",
+		"Venue":"Stadium Southland"
 		}
 		,
 		{
@@ -396,8 +433,9 @@
 		"Date":"Sunday 1 June",
 		"Time":"1:30 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"57–44",
-		"Away Team":"West Coast Fever"
+		"Score":"57-44",
+		"Away Team":"West Coast Fever",
+		"Venue":"State Netball and Hockey Centre"
 		}
 		,
 		{
@@ -405,8 +443,9 @@
 		"Date":"Monday 2 June",
 		"Time":"7:00 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"50–46",
-		"Away Team":"Canterbury Tactix"
+		"Score":"50-46",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -414,8 +453,9 @@
 		"Date":"Monday 2 June",
 		"Time":"7:00 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"41–47",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"41-47",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 	]
 	,
@@ -430,8 +470,9 @@
 		"Date":"Saturday 7 June",
 		"Time":"2:30 pm",
 		"Home Team":"Southern Steel",
-		"Score":"47–46",
-		"Away Team":"Melbourne Vixens"
+		"Score":"47-46",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"Stadium Southland"
 		}
 		,
 		{
@@ -439,8 +480,9 @@
 		"Date":"Sunday 8 June",
 		"Time":"1:00 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"61–41",
-		"Away Team":"Canterbury Tactix"
+		"Score":"61-41",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"ETSA Park"
 		}
 		,
 		{
@@ -448,8 +490,9 @@
 		"Date":"Sunday 8 June",
 		"Time":"5:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"56–50",
-		"Away Team":"Queensland Firebirds"
+		"Score":"56-50",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"Energy Events Centre"
 		}
 		,
 		{
@@ -457,8 +500,9 @@
 		"Date":"Monday 9 June",
 		"Time":"7:00 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"62–64",
-		"Away Team":"New South Wales Swifts"
+		"Score":"62-64",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -466,8 +510,9 @@
 		"Date":"Monday 9 June",
 		"Time":"6:00 pm",
 		"Home Team":"West Coast Fever",
-		"Score":"draw 33–16",
-		"Away Team":"Central Pulse"
+		"Score":"draw 33-16",
+		"Away Team":"Central Pulse",
+		"Venue":"Challenge Stadium"
 		}
 	]
 	,
@@ -482,8 +527,9 @@
 		"Date":"Saturday 14 June",
 		"Time":"2:30 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"47–48",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"47-48",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Trusts Stadium"
 		}
 		,
 		{
@@ -491,8 +537,9 @@
 		"Date":"Sunday 15 June",
 		"Time":"1:30 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"61–60",
-		"Away Team":"Queensland Firebirds"
+		"Score":"61-60",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"Sydney Olympic Park Sports Centre"
 		}
 		,
 		{
@@ -500,8 +547,9 @@
 		"Date":"Sunday 15 June",
 		"Time":"5:30 pm",
 		"Home Team":"Canterbury Tactix",
-		"Score":"50–49",
-		"Away Team":"Central Pulse"
+		"Score":"50-49",
+		"Away Team":"Central Pulse",
+		"Venue":"Westpac Centre"
 		}
 		,
 		{
@@ -509,8 +557,9 @@
 		"Date":"Monday 16 June",
 		"Time":"7:00 pm",
 		"Home Team":"Southern Steel",
-		"Score":"58–43",
-		"Away Team":"West Coast Fever"
+		"Score":"58-43",
+		"Away Team":"West Coast Fever",
+		"Venue":"Edgar Centre"
 		}
 		,
 		{
@@ -518,8 +567,9 @@
 		"Date":"Monday 16 June",
 		"Time":"7:00 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"47–40",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"47-40",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"State Netball and Hockey Centre"
 		}
 	]
 	,
@@ -534,8 +584,9 @@
 		"Date":"Saturday 21 June",
 		"Time":"2:30 pm",
 		"Home Team":"Central Pulse",
-		"Score":"41–46",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"41-46",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"TSB Bank Arena"
 		}
 		,
 		{
@@ -543,8 +594,9 @@
 		"Date":"Saturday 21 June",
 		"Time":"12:30 pm",
 		"Home Team":"West Coast Fever",
-		"Score":"48–54",
-		"Away Team":"Melbourne Vixens"
+		"Score":"48-54",
+		"Away Team":"Melbourne Vixens",
+		"Venue":"Challenge Stadium"
 		}
 		,
 		{
@@ -552,8 +604,9 @@
 		"Date":"Sunday 22 June",
 		"Time":"1:30 pm",
 		"Home Team":"Queensland Firebirds",
-		"Score":"50–36",
-		"Away Team":"Canterbury Tactix"
+		"Score":"50-36",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Brisbane Convention & Exhibition Centre"
 		}
 		,
 		{
@@ -561,8 +614,9 @@
 		"Date":"Monday 23 June",
 		"Time":"7:00 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"47–41",
-		"Away Team":"Southern Steel"
+		"Score":"47-41",
+		"Away Team":"Southern Steel",
+		"Venue":"North Shore Events Centre"
 		}
 		,
 		{
@@ -570,8 +624,9 @@
 		"Date":"Monday 23 June",
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
-		"Score":"51–41",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"51-41",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Sydney Olympic Park Sports Centre"
 		}
 	]
 	,
@@ -586,8 +641,9 @@
 		"Date":"Saturday 28 June",
 		"Time":"2:30 pm",
 		"Home Team":"Northern Mystics",
-		"Score":"42–28",
-		"Away Team":"Central Pulse"
+		"Score":"42-28",
+		"Away Team":"Central Pulse",
+		"Venue":"North Shore Events Centre"
 		}
 		,
 		{
@@ -595,8 +651,9 @@
 		"Date":"Saturday 28 June",
 		"Time":"2:00 pm",
 		"Home Team":"Adelaide Thunderbirds",
-		"Score":"66–47",
-		"Away Team":"Queensland Firebirds"
+		"Score":"66-47",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"ETSA Park"
 		}
 		,
 		{
@@ -604,8 +661,9 @@
 		"Date":"Sunday 29 June",
 		"Time":"11:30 am",
 		"Home Team":"West Coast Fever",
-		"Score":"50–44",
-		"Away Team":"Canterbury Tactix"
+		"Score":"50-44",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Challenge Stadium"
 		}
 		,
 		{
@@ -613,8 +671,9 @@
 		"Date":"Monday 30 June",
 		"Time":"7:00 pm",
 		"Home Team":"Southern Steel",
-		"Score":"47–43",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Score":"47-43",
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"Stadium Southland"
 		}
 		,
 		{
@@ -622,8 +681,9 @@
 		"Date":"Monday 30 June",
 		"Time":"7:00 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"49–62",
-		"Away Team":"New South Wales Swifts"
+		"Score":"49-62",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Vodafone Arena"
 		}
 	]
 	,
@@ -638,8 +698,9 @@
 		"Date":"Saturday 5 July",
 		"Time":"2:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
-		"Score":"69–44",
-		"Away Team":"Canterbury Tactix"
+		"Score":"69-44",
+		"Away Team":"Canterbury Tactix",
+		"Venue":"Mystery Creek Events Centre"
 		}
 		,
 		{
@@ -647,8 +708,9 @@
 		"Date":"Sunday 6 July",
 		"Time":"1:30 pm",
 		"Home Team":"Melbourne Vixens",
-		"Score":"56–47",
-		"Away Team":"Northern Mystics"
+		"Score":"56-47",
+		"Away Team":"Northern Mystics",
+		"Venue":"Vodafone Arena"
 		}
 		,
 		{
@@ -656,8 +718,9 @@
 		"Date":"Sunday 6 July",
 		"Time":"5:30 pm",
 		"Home Team":"Southern Steel",
-		"Score":"54–52",
-		"Away Team":"Queensland Firebirds"
+		"Score":"54-52",
+		"Away Team":"Queensland Firebirds",
+		"Venue":"Edgar Centre"
 		}
 		,
 		{
@@ -665,8 +728,9 @@
 		"Date":"Monday 7 July",
 		"Time":"7:00 pm",
 		"Home Team":"Central Pulse",
-		"Score":"32–44",
-		"Away Team":"Adelaide Thunderbirds"
+		"Score":"32-44",
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Pettigrew Green Arena"
 		}
 		,
 		{
@@ -674,8 +738,9 @@
 		"Date":"Monday 7 July",
 		"Time":"6:00 pm",
 		"Home Team":"West Coast Fever",
-		"Score":"54–63",
-		"Away Team":"New South Wales Swifts"
+		"Score":"54-63",
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Challenge Stadium"
 		}
 	]
 	,
@@ -691,7 +756,8 @@
 		"Time":"5:30 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
 		"Score":"56-57",
-		"Away Team":"New South Wales Swifts"
+		"Away Team":"New South Wales Swifts",
+		"Venue":"Mystery Creek Events Centre"
 		}
 		,
 		{
@@ -700,7 +766,8 @@
 		"Time":"4:30 pm",
 		"Home Team":"Adelaide Thunderbirds",
 		"Score":"53-48",
-		"Away Team":"Melbourne Vixens"
+		"Away Team":"Melbourne Vixens",
+		"Venue":"ETSA Park"
 		}
 	]
 	,
@@ -716,7 +783,8 @@
 		"Time":"7:00 pm",
 		"Home Team":"Waikato Bay of Plenty Magic",
 		"Score":"51-49",
-		"Away Team":"Adelaide Thunderbirds"
+		"Away Team":"Adelaide Thunderbirds",
+		"Venue":"Mystery Creek Events Centre"
 		}
 	]
 	,
@@ -732,7 +800,8 @@
 		"Time":"7:00 pm",
 		"Home Team":"New South Wales Swifts",
 		"Score":"65-56",
-		"Away Team":"Waikato Bay of Plenty Magic"
+		"Away Team":"Waikato Bay of Plenty Magic",
+		"Venue":"Acer Arena"
 		}
 	]
 	,

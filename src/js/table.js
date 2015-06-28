@@ -123,7 +123,8 @@ function determineWinner(score){
     return 0;  
   }
   // get home and away scores
-  var data = score.split("-");
+  var data = score.split("-")
+ 
   var homeScore = +data[0];
   var awayScore = +data[1];
   // determine which team won
