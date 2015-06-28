@@ -18,7 +18,7 @@ function createTeamSelector(){
                 .attr("y", 0)
                 .attr("width", 90)
                 .attr("height", 67)
-                .on("click", function(d){})
+                .on("click", function(d){performFunction(d.team);})
                 .attr("xlink:href", function(d, i){return ("images/"+d.team+".png");});
     
     });

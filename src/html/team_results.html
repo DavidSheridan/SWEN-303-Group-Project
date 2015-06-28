@@ -47,6 +47,14 @@
             <div id="team_select" class="default">
                 <script>
                     createTeamSelector();
+                    
+                    function performFunction(team){
+                        var data = getData(team, 0);
+                        var primary = constructPieChartData(data);
+                        var secondary = constructSecondaryPieChartData(data.teams, "wins");
+                        updatePieChart(primary, "Primary");
+                        updatePieChart(secondary, "Secondary");
+                    }
                 </script>
             </div>
             
