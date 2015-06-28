@@ -333,10 +333,21 @@ function add_to_away_data(game, data){
 	var is_found = false;
 	var temp;
 	if (game.Score.indexOf('–') > -1){
-		temp = game.Score.split('–');
+		if (game.Score.indexOf('(') > -1){
+			temp = game.Score.split('(');
+			temp = temp[0].split('–')
+		} else {
+			temp = game.Score.split('–');
+		}
 	}
 	else {
-		temp = game.Score.split('-');
+		if (game.Score.indexOf('(') > -1){
+			temp = game.Score.split('(');
+			temp = temp[0].split('-')
+		}
+		else {
+			temp = game.Score.split('-');
+		}
 	}
 	for (var i = 0; i < data.away.length; i++){
 		if (data.away.length > 0 && 
