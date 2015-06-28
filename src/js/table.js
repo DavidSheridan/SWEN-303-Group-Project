@@ -29,7 +29,8 @@ function onStartup(year){
 
 function redraw(year){
   document.getElementById("placings_table").innerHTML="";
-  document.getElementById("title").innerHTML="<h2 font-color= black>Final results for the year "+year+"</h2>"
+  document.getElementById("title").innerHTML="<h2 font-color= black>Final results for the year "+year+"</h2>";
+  document.getElementById("finals_graph").innerHTML="<h3 font-color= black>Graph displaying the finals for the year "+year+"</h3> <br>";
 }
 
 /**

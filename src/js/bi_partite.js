@@ -311,7 +311,7 @@ function bi_partite(year){
 
 function redraw(year){
 	document.getElementById("bi_partite_border").innerHTML="";
-  	document.getElementById("title").innerHTML="<h2 font-color= #000000>Home VS away games for the year "+year+"</h2>"
+  	document.getElementById("title").innerHTML="<h2 font-color= #000000>Home VS away games for the year "+year+"</h2>";
 }
 
 function parse_bi_partite_data(data){

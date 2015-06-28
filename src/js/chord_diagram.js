@@ -20,7 +20,8 @@ function constructChordDiagram(year){
 
 function redraw(year){
     document.getElementById("win_stats").innerHTML="";
-    document.getElementById("title").innerHTML="<h2 font-color= black>Win Statistics for the year "+year+"</h2>"
+    document.getElementById("title").innerHTML="<h2 font-color= black>Win Statistics for the year "+year+"</h2>";
+    document.getElementById("win_stats").innerHTML="<h3 font-color=black>Points scored for each team in the year "+year+"</h3> <br>";
 }
 
 function drawChordDiagram(data){
