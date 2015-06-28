@@ -1,7 +1,7 @@
 "use strict";
 
 // global variables
-var DATA = [];
+var DATA;
 var TEAMS = [];
 var START_YEAR = 2008;
 var PRIMARY = "Primary";
@@ -21,10 +21,11 @@ function loadData(team, year){
     });})();
     
     // load in netball data
-    var filename = "json/data.json";
+    var filename = "json/"+year+"-Table1.json";
     (function(){d3.json(filename, function(error, data){
-        DATA = data.championships;
-        var data = getData(team, year - START_YEAR);
+        console.log(data);
+        DATA = data.rounds;
+        var data = getData(team);
         var primary = constructPieChartData(data);
         var secondary = constructSecondaryPieChartData(data.teams, "wins");
         var lineData = constructLineChartData(data.points);
@@ -42,7 +43,7 @@ function redraw(year){
     document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Performance for the year "+year+"</h2>";
 }
 
-function getData(team, id){
+function getData(team){
     //console.log("team: "+team+", id: "+id);
     var data = createEmptyData(team);
     calculateStatistics(data);
@@ -76,9 +77,9 @@ function getData(team, id){
 
     function calculateStatistics(data){
         // iterate through the rounds
-        for(var i = 0; i < DATA[id].rounds.length; i++){
+        for(var i = 0; i < DATA.length; i++){
             // iterate through games in the current round
-            var games = DATA[id].rounds[i].round.games;
+            var games = DATA[i].round.games;
             for(var j = 0; j < games.length; j++){
                 // check if team actually played in this game
                 if(!containsTeam(games[j], data.name)){
