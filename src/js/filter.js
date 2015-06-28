@@ -106,7 +106,7 @@ function make_win_filter_buttons(button_name, filename){
 		.classed('btn btn-primary btn-lg', true)
 		.text(button_name)
 		.on('click', function() {
-			constructChordDiagram(button_name);
+			loadData("All", button_name);
 		});
 }
 

@@ -1,8 +1,37 @@
+"use strict";
 
-var matrixData = [];
-var dataset = [];
-var teams = [];
+var DATA;
+var TEAMS;
+var START_YEAR = 2008;
+var PRIMARY = "Primary";
+var CURRENT_COUNTRY;
+var CURRENT_YEAR;
 
+var pieChart1, pieChart2, lineChart; // svgs
+
+function loadData(country, year){
+    redraw(year);
+    setupSVG();
+    // load team data
+    (function(){d3.json("json/teams.json", function(data){TEAMS = data.teams;});})();
+    
+    CURRENT_COUNTRY = country;
+    CURRENT_YEAR = year;
+    
+    // load in netball data
+    var filename = "json/"+CURRENT_YEAR+"-Table1.json";
+
+    (function(){d3.json(filename, function(error, data){
+        DATA = data.rounds;
+        var matrixData = createEmptyAdjacencyMatrix(TEAMS.length);
+        var test = populateAdjacencyMatrix(DATA, TEAMS, matrixData);
+            
+        updateChordDiagram(test);
+
+    });})();
+}
+
+/*
 function constructChordDiagram(year){
     redraw(year);
     d3.json("json/"+year+"-Table1.json", function(data){
@@ -16,7 +45,7 @@ function constructChordDiagram(year){
             drawChordDiagram(matrixData);
         });
     });
-}
+}*/
 
 function redraw(year){
     document.getElementById("win_stats").innerHTML="";
@@ -24,33 +53,38 @@ function redraw(year){
     document.getElementById("win_stats").innerHTML="<h3 font-color=black>Points scored for each team in the year "+year+"</h3> <br>";
 }
 
-function drawChordDiagram(data){
-    var chord = d3.layout.chord()
+var chord = d3.layout.chord()
         .padding(.05)
-        .sortSubgroups(d3.descending)
-        .matrix(convertDataToMatrix(data));
+        .sortSubgroups(d3.descending);
         
-    var width = 450;
-    var height = 450;
-    var innerRadius = Math.min(width, height) * 0.41;
-    var outerRadius = innerRadius * 1.1;
+var width = 450;
+var height = 450;
+var innerRadius = Math.min(width, height) * 0.41;
+var outerRadius = innerRadius * 1.1;
     
-    var fill = d3.scale.ordinal()
-        .domain(d3.range(10))
-        .range(["#FF00FF", "#FFFF00", "#800033", "#003366", "#FF0000", "#0066FF", "#993399", "#33CCFF", "#808033", "#004C4C"]);
+var fill = d3.scale.ordinal()
+    .domain(d3.range(10))
+    .range(["#FF00FF", "#FFFF00", "#800033", "#003366", "#FF0000", "#0066FF", "#993399", "#33CCFF", "#808033", "#004C4C"]);
     
-    var svg = d3.select("#win_stats").append("svg")
+var svg;
+    
+var text = d3.select("#win_stats").append("svg")
+    .attr("class", "chord-text")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+        .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
+
+function setupSVG(){
+    svg = d3.select("#win_stats").append("svg")
         .attr("width", width)
         .attr("height", height)
         .append("g")
-            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
-    
-    var text = d3.select("#win_stats").append("svg")
-        .attr("class", "chord-text")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
+            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");    
+}
+        
+function updateChordDiagram(data){
+    chord.matrix(convertDataToMatrix(data));
     
     svg.append("g").selectAll("path")
         .data(chord.groups)
@@ -61,31 +95,6 @@ function drawChordDiagram(data){
                     .attr("d", d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius))
                     .on("mouseover", fade(0.1, svg))
                     .on("mouseout", fade(1, svg));
-    
-    var ticks = svg.append("g").selectAll("g")
-        .data(chord.groups)
-            .enter()
-                .append("g")
-                .selectAll("g")
-                    .data(groupTicks)
-                        .enter()
-                            .append("g")
-                                .attr("transforn", function(d){
-                                    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
-                                        + "translate(" + outerRadius + ", 0)";
-                                });
-    ticks.append("line")
-        .attr("x1", 1)
-        .attr("x2", 0)
-        .attr("y1", 5)
-        .attr("y2", 0)
-        .style("stroke", "#000");
-        
-    ticks.append("text")
-        .attr("x", 8)
-        .attr("dy", ".35em")
-        .attr("transform", function(d){return d.angle > Math.PI ? "rotate(180)translate(-16)" : null})
-        .style("text-anchor", function(d){return d.angle > Math.PI ? "end" : null});
         
     svg.append("g")
         .attr("class", "chord")
@@ -96,21 +105,6 @@ function drawChordDiagram(data){
                         .attr("d", d3.svg.chord().radius(innerRadius))
                         .style("fill", function(d){return fill(d.source.index);})
                         .style("opacity", 1);
-}
-
-/**
- * Returns an array of tick angles and labels, given a group
- *
- * Code from http://bl.ocks.org/mbostock/4062006
- */
-function groupTicks(d){
-    var k = (d.endAngle - d.startAngle) / d.value;
-    return d3.range(0, d.value, 1000).map(function(v, i){
-        return{
-            angle: v * k + d.startAngle,
-            label: i % 5 ? null : v / 1000 + "k"
-        };
-    });
 }
 
 /**
@@ -149,6 +143,7 @@ function populateAdjacencyMatrix(data, teams, matrix){
             matrix[awayIndex][homeIndex].points = +matrix[awayIndex][homeIndex].points + +awayScore;
         }
     }
+    return matrix;
 }
 
 /**
@@ -183,7 +178,7 @@ function getScores(score){
  * Returns the specified data in the form of a number matrix
  */
 function convertDataToMatrix(data){
-    matrix = [];
+    var matrix = [];
     for(var i = 0; i < data.length; i++){
         matrix[i] = [];
         for(var j = 0; j < data[i].length; j++){
