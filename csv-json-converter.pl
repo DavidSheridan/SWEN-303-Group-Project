@@ -24,6 +24,7 @@ foreach(@ARGV){
     my $prev_round = -1;
     my @headers = split(/,/, $round_data[0]);
     $headers[5] =~ s/(\n|\r)//g;
+    $headers[6] =~ s/(\n|\"|\r)//g;
     #print @headers;
     my $inc;
     my $round = 1;
@@ -44,7 +45,16 @@ foreach(@ARGV){
                     $line[6] =~ s/(\n|\"|\r)//g;
                     print $fh "\t\t\{\n";
                     print $fh "\t\t\"$headers[0]\":\"$line[0]\",\n";
-                    if ($line[2] =~ m/(pm|am)/){
+                    if ($new_file =~ m/2008/){
+                        print $fh "\t\t\"$headers[1]\":\"$line[1]\",\n";
+                        print $fh "\t\t\"$headers[2]\":\"$line[2]\",\n";
+                        $line[4] =~ s/(—|–)/-/g;
+                        print $fh "\t\t\"$headers[3]\":\"$line[3]\",\n";
+                        print $fh "\t\t\"$headers[4]\":\"$line[4]\",\n";
+                        print $fh "\t\t\"$headers[5]\":\"$line[5]\",\n";
+                        print $fh "\t\t\"$headers[6]\":\"$line[6]\"\n";
+                    }
+                    elsif ($line[2] =~ m/(pm|am)/){
                         print $fh "\t\t\"$headers[1]\":\"$line[1],$line[2]\",\n";
                         print $fh "\t\t\"$headers[2]\":\"$line[3]\",\n";
                         $line[4] =~ s/(—|–)/-/g;
