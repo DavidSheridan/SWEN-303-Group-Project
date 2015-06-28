@@ -40,14 +40,15 @@ foreach(@ARGV){
                 && $line[0] == $round;
                 @line = split(/,/, $round_data[++$inc2])){
                     print @line;
-                    $line[5] =~ s/(\n|\")//g;
+                    $line[5] =~ s/(\n|\"|\r)//g;
+                    $line[6] =~ s/(\n|\"|\r)//g;
                     print $fh "\t\t\{\n";
                     print $fh "\t\t\"$headers[0]\":\"$line[0]\",\n";
                     if ($line[2] =~ m/(pm|am)/){
                         print $fh "\t\t\"$headers[1]\":\"$line[1],$line[2]\",\n";
                         print $fh "\t\t\"$headers[2]\":\"$line[3]\",\n";
                         print $fh "\t\t\"$headers[3]\":\"$line[4]\",\n";
-                        $line[5] ~= s/—/-/g;
+                        $line[5] =~ s/—/-/g;
                         print $fh "\t\t\"$headers[4]\":\"$line[5]\",\n";
                         print $fh "\t\t\"$headers[5]\":\"$line[6]\"\n";
                     }
@@ -55,7 +56,7 @@ foreach(@ARGV){
                         print $fh "\t\t\"$headers[1]\":\"$line[1]\",\n";
                         print $fh "\t\t\"$headers[2]\":\"$line[2]\",\n";
                         print $fh "\t\t\"$headers[3]\":\"$line[3]\",\n";
-                        $line[4] ~= s/—/-/g;
+                        $line[4] =~ s/—/-/g;
                         print $fh "\t\t\"$headers[4]\":\"$line[4]\",\n";
                         print $fh "\t\t\"$headers[5]\":\"$line[5]\"\n";
                     }
