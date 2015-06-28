@@ -45,7 +45,10 @@ function loadData(team, year){
         DATA = data.championships;
         var data = getData(team, year - START_YEAR);
         var pieData = constructPieChartData(data);
-        updatePieChart(pieData.data, PRIMARY);
+        var test = constructSecondaryPieChartData(data.teams, "wins");
+        console.log(test);
+        updatePieChart(pieData, PRIMARY);
+        updatePieChart(test, "Secondary");
     });})();
 }
 
@@ -144,7 +147,35 @@ function constructPieChartData(data){
             }
         ]
     };
-    return pieChart;
+    return pieChart.data;
+}
+
+function constructSecondaryPieChartData(data, type){
+    console.log(data);
+    var pieChart = {
+        data: []
+    };
+    
+    for(var i = 0; i < TEAMS.length; i++){
+        pieChart.data[i] = {
+            label: TEAMS[i].team,
+            value: getValue(data[i], type)
+        };
+    }
+    
+    return pieChart.data;
+    
+    function getValue(d, type){
+        if(type === "wins"){
+            return d.wins;
+        }
+        else if(type === "loses"){
+            return d.loses;
+        }
+        else{
+            return d.draws;
+        }
+    }
 }
 
 /** DRAWING PIE CHART **/
@@ -178,7 +209,7 @@ function setupSVG(){
 }
 
 function updatePieChart(data, chart){
-    var svg = pieChart1;//(chart === "Primary") ? pieChart1 : pieChart2;
+    var svg = (chart === "Primary") ? pieChart1 : pieChart2;
     /* ------- PIE SLICES -------*/
     var slice = svg.select(".slices").selectAll("path.slice")
         .data(pie(data), key);
