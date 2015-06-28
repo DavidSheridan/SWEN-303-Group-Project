@@ -31,7 +31,6 @@
 
             <!-- Title information goes here -->
             <div id="title" class="default">
-                <h2>Home Vs Away for the year 20XX</h2>
             </div>
 
             <div id="home_vs_away" class="default">
@@ -39,13 +38,19 @@
                 <script type="text/javascript" src="../js/bi_partite.js">
                 </script>
                 <script type="text/javascript">
-                    bi_partite("json/2011-Table1.json");
+                    bi_partite(2008);
                 </script>
             </div>
             <div id="filters" class="default">
             </div>     
             
             <script type="text/javascript">
+                make_filter_buttons(2008, "2008-Table1.json");
+                make_filter_buttons(2009, "2009-Table1.json");
+                make_filter_buttons(2010, "2010-Table1.json");
+                make_filter_buttons(2011, "2011-Table1.json");
+                make_filter_buttons(2012, "2012-Table1.json");
+                make_filter_buttons(2013, "2013-Table1.json");
                 make_season_filter();
             </script>
         </div>

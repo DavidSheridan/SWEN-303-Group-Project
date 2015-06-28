@@ -279,7 +279,8 @@
 	this.bP = bP;
 }();
 
-function bi_partite(filename){
+function bi_partite(year){
+	redraw(year);
 	d3.select("#bi_partite_border")
 		.remove();
 
@@ -287,7 +288,7 @@ function bi_partite(filename){
 		.append("div")
 		.attr("id", "bi_partite_border");
 
-	d3.json(filename, function (error, data) {
+	d3.json("json/"+year+"-Table1.json", function (error, data) {
 		var data = parse_bi_partite_data(data.rounds);
 
 		var width = 1100, height = 710, margin ={b:0, t:40, l:170, r:50};
@@ -304,6 +305,11 @@ function bi_partite(filename){
 		bP.draw(data, svg);
 		
 	});
+}
+
+function redraw(year){
+	document.getElementById("bi_partite_border").innerHTML="";
+  	document.getElementById("title").innerHTML="<h2>Final results for the year "+year+"</h2>"
 }
 
 function parse_bi_partite_data(data){
