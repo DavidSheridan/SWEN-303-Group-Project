@@ -46,7 +46,6 @@ function loadData(team, year){
         var data = getData(team, year - START_YEAR);
         var pieData = constructPieChartData(data);
         var test = constructSecondaryPieChartData(data.teams, "wins");
-        console.log(test);
         updatePieChart(pieData, PRIMARY);
         updatePieChart(test, "Secondary");
     });})();
@@ -111,11 +110,11 @@ function getData(team, id){
                 }
                 else if((isHome && +scores[0] > +scores[1]) || (!isHome && +scores[0] < +scores[1])){
                     data.wins = +data.wins + 1;
-                    data.teams[index].loses = +data.teams[index].loses + 1;
+                    data.teams[index].wins = +data.teams[index].wins + 1;
                 }
                 else{
                     data.loses = +data.loses + 1;
-                    data.teams[index].wins = +data.teams[index].wins + 1;
+                    data.teams[index].loses = +data.teams[index].loses + 1;
                 }
                 
                 data.points[data.count] = (isHome) ? +scores[0] : +scores[1];
@@ -151,7 +150,6 @@ function constructPieChartData(data){
 }
 
 function constructSecondaryPieChartData(data, type){
-    console.log(data);
     var pieChart = {
         data: []
     };
