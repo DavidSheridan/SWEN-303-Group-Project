@@ -45,3 +45,7 @@ polyline{
 .pie_secondary{
     float: right;
 }
+
+.line_chart{
+    float: center
+}

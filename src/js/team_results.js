@@ -220,7 +220,7 @@ function setupSVG(){
             .attr("width", lWidth + margin.left + margin.right)
             .attr("height", lHeight + margin.top + margin.bottom)
             .append("g")
-                .attr("transform", "translate(" + margin.left + ", " + margin.right + ")");
+                .attr("transform", "translate(" + lWidth / 4 + ", " + lHeight / 4 + ")");
             
 }
 
@@ -382,15 +382,14 @@ var line = d3.svg.line()
     .y(function(d){return y(d.points);});
 
 function updateLineChart(data){
-    console.log("update line chart");
     x.domain(d3.extent(data, function(d){return d.game;}));
     y.domain(d3.extent(data, function(d){return d.points;}));
-    console.log("add x axis");
+
     lineChart.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0, " + height +")")
         .call(xAxis);
-    console.log("add y axis");
+
     lineChart.append("g")
         .attr("class", "y axis")
         .call(yAxis)
@@ -400,7 +399,7 @@ function updateLineChart(data){
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("Points Scored Per Game");
-    console.log("add path");
+            
     lineChart.append("path")
         .datum(data)
         .attr("class", "line")
