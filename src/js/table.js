@@ -19,7 +19,7 @@ function onStartup(year){
         points.sort(comparePoints);
  	
         var data = constructData(points);
-        var cols = ["Placings", "Team", "Points"];
+        var cols = ["Placings", "Team", "Points", "Placings", "Team", "Points"];
  	
         var peopleTable = tabl(data, cols);
        
@@ -28,13 +28,7 @@ function onStartup(year){
 }
 
 function redraw(year){
-  document.getElementById("placings_table").innerHTML=
-    '<input type="button" onclick="onStartup(2008)" value="2008"/>'+'&nbsp;'+
-    '<input type="button" onclick="onStartup(2009)" value="2009"/>'+'&nbsp;'+
-    '<input type="button" onclick="onStartup(2010)" value="2010"/>'+'&nbsp;'+
-    '<input type="button" onclick="onStartup(2011)" value="2011"/>'+'&nbsp;'+
-    '<input type="button" onclick="onStartup(2012)" value="2012"/>'+'&nbsp;'+
-    '<input type="button" onclick="onStartup(2013)" value="2013"/>';
+  document.getElementById("placings_table").innerHTML="";
   document.getElementById("title").innerHTML="<h2>Final results for the year "+year+"</h2>"
 }
 
@@ -56,15 +50,18 @@ function tabl(data, columns){
         .append("th")
             .text(function(column) { return column; });
 
-    for(var z = 0; z<data.length; z++){
-    	da = data[z];
-
-	tbody.append("tr")
-   		.selectAll("td")
-   		.data(da)
-   		.enter()
-   		.append("td")
-   		.text(function(d) { return d;});
+    for(var z = 0; z<5; z++){
+      da = data[z];
+      da2 = data[z+5]
+      for (var q=0; q<da2.length; q++){
+        da[q+3]=da2[q];
+      }
+      tbody.append("tr")
+      .selectAll("td")
+      .data(da)
+      .enter()
+      .append("td")
+      .text(function(d) { return d;});
     }
     return table;
 }
