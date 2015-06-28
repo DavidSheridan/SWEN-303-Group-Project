@@ -115,7 +115,9 @@ function updateChordDiagram(data){
                     .style("stroke", function(d){return fill(d.index);})
                     .attr("d", d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius))
                     .on("mouseover", fade(0.1, svg))
-                    .on("mouseout", fade(1, svg));
+                    .on("mouseout", fade(1, svg))
+                    .append("svg:title")
+                        .text(function(d, i){return convertIntToTeam(i, TEAMS).team;});
         
     svg.append("g")
         .attr("class", "chord")
