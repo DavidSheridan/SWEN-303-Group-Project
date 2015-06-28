@@ -34,3 +34,11 @@ function getScores(score){
     var temp = score.split("-");
     return [temp[0], temp[1], isDraw];
 }
+
+/**
+ * Returns an abbreviated version of the specified name.
+ */
+function abbreviateName(name){
+    name = name.split(" ");
+    return name[name.length - 1];
+}

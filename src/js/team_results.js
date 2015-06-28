@@ -158,7 +158,7 @@ function constructSecondaryPieChartData(data, type){
     
     for(var i = 0; i < TEAMS.length; i++){
         pieChart.data[i] = {
-            label: TEAMS[i].team,
+            label: abbreviateName(TEAMS[i].team),
             value: getValue(data[i], type)
         };
     }
