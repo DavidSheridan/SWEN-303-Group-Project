@@ -210,6 +210,7 @@ function setupSVG(){
     
     pieChart1.attr("transform", "translate(" + 280 + "," + height / 2 + ")");
     
+    
     pieChart2 = d3.select("#pie_secondary")
         .append("svg")
             .attr("class", "pie_secondary")
