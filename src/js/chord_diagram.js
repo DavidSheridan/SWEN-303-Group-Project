@@ -101,7 +101,16 @@ function setupSVG(){
         .attr("width", width)
         .attr("height", height)
         .append("g")
-            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");    
+            .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
+
+    svg.append("rect")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("x", - (width / 2))
+        .attr("y", -225)
+        .attr("fill", "#EDEDED")
+        .attr("stroke", "#D8D8D8")
+        .attr("transform", "translate(0, 0)");
 }
         
 function updateChordDiagram(data){

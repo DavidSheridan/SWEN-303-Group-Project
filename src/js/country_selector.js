@@ -16,9 +16,9 @@ function createCountrySelector(){
                 .attr("y", 0)
                 .attr("width", 90)
                 .attr("height", 67)
-                .attr("fill", "white")
+                .attr("fill", "#EDEDED")
                 .on("click", function(d){performFunction(convert(d));})
-                .attr("stroke", "black");
+                .attr("stroke", "#B6B6B6");
         
         svg.selectAll("svg.country_select").data(data).enter()
             .append("text")
