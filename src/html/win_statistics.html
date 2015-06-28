@@ -53,6 +53,10 @@
             <div id="country_select" class="default">
                 <script>
                     createCountrySelector();
+                    
+                    function performFunction(country){
+                        loadData(country, CURRENT_YEAR);
+                    }
                 </script>
             </div>
             

@@ -28,12 +28,9 @@ function loadData(country, year){
     (function(){d3.json(filename, function(error, data){
         DATA = data.rounds;
         
-        console.log(filterByCountry(data.rounds, ALL));
-        
-        var matrixData = createEmptyAdjacencyMatrix(TEAMS.length);
-        var test = populateAdjacencyMatrix(DATA, TEAMS, matrixData);
-            
-        updateChordDiagram(test);
+        var d = filterByCountry(data.rounds, CURRENT_COUNTRY);
+        var chordData = constructAdjacencyMatrix(d, TEAMS.length);
+        updateChordDiagram(chordData);
 
     });})();
 }
@@ -108,7 +105,7 @@ function setupSVG(){
 }
         
 function updateChordDiagram(data){
-    chord.matrix(convertDataToMatrix(data));
+    chord.matrix(data);
     
     svg.append("g").selectAll("path")
         .data(chord.groups)
@@ -129,34 +126,6 @@ function updateChordDiagram(data){
                         .attr("d", d3.svg.chord().radius(innerRadius))
                         .style("fill", function(d){return fill(d.source.index);})
                         .style("opacity", 1);
-                        
-    var text = svg.append("g").selectAll("text")
-        .data(data);
-        
-    text.enter()
-        .append("text")
-            .attr("dy", ".35em")
-            .text(function(d, i){
-                    var t = convertIntToTeam(i, TEAMS);
-                    return t.team;
-                });
-    
-    function midAngle(d){
-        return d.startAngle + (d.endAngle - d.startAngle) / 2;
-    }
-    
-    text.transition().duration(0)
-        .attrTween("transform", function(d){
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function(t){
-                var d2 = interpolate(t);
-                var pos = outerArc.centroid(d2);
-                pos[0] = outerRadius * (midAngle(d2) < Math.PI ? 1 : -1);
-                return "translate(" + pos + ")";
-            }
-        })
 }
 
 /**
@@ -173,29 +142,26 @@ function fade(opacity, svg){
     };
 }
 
-function populateAdjacencyMatrix(data, teams, matrix){
+function constructAdjacencyMatrix(data, size){
+    var temp = createEmptyAdjacencyMatrix(size);
     // iterate through rounds
-    for(var round = 0; round < data.length; round++){
-        // iterate through games in current round
-        var games = data[round].round.games;
-        for(var game = 0; game < games.length; game++){
-            // get team data from current game
-            var home = games[game]["Home Team"];
-            var away = games[game]["Away Team"];
-            var homeIndex = convertTeamToInt(home, teams);
-            var awayIndex = convertTeamToInt(away, teams);
+    for(var i = 0; i < data.length; i++){
+        // get team data from current game
+        var home = data[i]["Home Team"];
+        var away = data[i]["Away Team"];
+        var homeIndex = convertTeamToInt(home, TEAMS);
+        var awayIndex = convertTeamToInt(away, TEAMS);
                         
-            // get points scored for each team
-            var scores = getScores(games[game].Score);
-            var homeScore = +scores[0];
-            var awayScore = +scores[1];
+        // get points scored for each team
+        var scores = getScores(data[i].Score);
+        var homeScore = +scores[0];
+        var awayScore = +scores[1];
 
-            // update adjacency matrix with new data
-            matrix[homeIndex][awayIndex].points = +matrix[homeIndex][awayIndex].points + +homeScore;
-            matrix[awayIndex][homeIndex].points = +matrix[awayIndex][homeIndex].points + +awayScore;
-        }
+        // update adjacency matrix with new data
+        temp[homeIndex][awayIndex].points = +temp[homeIndex][awayIndex].points + +homeScore;
+        temp[awayIndex][homeIndex].points = +temp[awayIndex][homeIndex].points + +awayScore;
     }
-    return matrix;
+    return convertDataToMatrix(temp);
 }
 
 /**
