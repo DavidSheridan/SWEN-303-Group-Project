@@ -6,6 +6,8 @@ function make_menu_button(menu, filename) {
 		.style('width', '25%')
 		.style('border-radius', '10')
 		.style('border-color', '#000')
+		.style('border-style', 'ridge')
+		.style('border-width', '2')
 		.classed('btn btn-primary btn-lg', true)
 		.text(menu)
 		.on('click', function() {

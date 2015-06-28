@@ -65,6 +65,8 @@ function make_filter_buttons(button_name, filename) {
 		.style('border-radius', '10')
 		.style('background-color', '#00aeef')
 		.style('border-color', '#000')
+		.style('border-style', 'ridge')
+		.style('border-width', '2')
 		.classed('btn btn-primary btn-lg', true)
 		.text(button_name)
 		.on('click', function() {
@@ -82,6 +84,8 @@ function make_bip_filter_buttons(button_name, filename) {
 		.style('border-radius', '10')
 		.style('background-color', '#00aeef')
 		.style('border-color', '#000')
+		.style('border-style', 'ridge')
+		.style('border-width', '2')
 		.classed('btn btn-primary btn-lg', true)
 		.text(button_name)
 		.on('click', function() {
@@ -97,6 +101,8 @@ function make_win_filter_buttons(button_name, filename){
 		.style('border-radius', '10')
 		.style('background-color', '#00aeef')
 		.style('border-color', '#000')
+		.style('border-style', 'ridge')
+		.style('border-width', '2')
 		.classed('btn btn-primary btn-lg', true)
 		.text(button_name)
 		.on('click', function() {
