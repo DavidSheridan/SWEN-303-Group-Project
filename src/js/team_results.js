@@ -194,7 +194,15 @@ function setupSVG(){
             .attr("width", width)
             .attr("height", height)
             .append("g");
-
+    
+    pieChart1.append("rect")
+        .attr("width", width - 30)
+        .attr("height", height)
+        .attr("x",  -205)
+        .attr("y", -150)
+        .attr("fill", "#EDEDED")
+        .attr("stroke", "#D8D8D8");
+    
     pieChart1.append("g").attr("class", "slices");
     pieChart1.append("g").attr("class", "labels");
     pieChart1.append("g").attr("class", "lines");
@@ -207,6 +215,14 @@ function setupSVG(){
             .attr("width", width)
             .attr("height", height)
             .append("g");
+            
+    pieChart2.append("rect")
+        .attr("width", width - 30)
+        .attr("height", height)
+        .attr("x",  -210)
+        .attr("y", -150)
+        .attr("fill", "#EDEDED")
+        .attr("stroke", "#D8D8D8");
             
     pieChart2.append("g").attr("class", "slices");
     pieChart2.append("g").attr("class", "labels");
@@ -398,7 +414,7 @@ function updateLineChart(data){
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("Points Scored Per Game");
+            .text("Goals Scored per Game");
             
     lineChart.append("path")
         .datum(data)
