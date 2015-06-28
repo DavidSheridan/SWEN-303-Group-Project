@@ -39,7 +39,7 @@ function redraw(year){
     CURRENT_YEAR = year;
     document.getElementById("pie_primary").innerHTML="";
     document.getElementById("pie_secondary").innerHTML="";
-    document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Results for the year "+year+"</h2>";
+    document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Performance for the year "+year+"</h2>";
 }
 
 function getData(team, id){
