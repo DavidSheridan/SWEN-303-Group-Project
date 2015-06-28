@@ -1,13 +1,11 @@
 #placings_table {
-    width: 98%;
-    margin-left: 1%;
-    padding: 10;
+    width:100%;
+    padding: 10px;
 }
 
 #finals_graph {
-    width: 98%;
-    margin-left: 1%;
-    padding: 10;
+    width: 100%;
+    padding: 10px;
 }
 
 .node rect {

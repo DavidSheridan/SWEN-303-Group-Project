@@ -7,41 +7,31 @@
 }
 
 #menu {
-    width:98%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 10;
+    width:100%;
+    padding: 10px;
 }
 
 #title {
-    width:98%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 10;
+    width:100%;
+    padding: 10px;
     font-size: 36;
 }
 
 #filters {
-    width:98%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 10;
+    width:100%;
+    padding: 10px;
     font-color: #000;
 }
 
 #home_vs_away {
-  width:98%;
-  margin-left: 1%;
-  margin-right: 1%;
-  padding: 10;
+  width:100%;
+  padding: 10px;
   font-color: #000;
 }
 
 #win_stats {
-  width:98%;
-  margin-left: 1%;
-  margin-right: 1%;
-  padding: 10; 
+  width:100%;
+  padding: 10px; 
 }
 
 table, td, th {
