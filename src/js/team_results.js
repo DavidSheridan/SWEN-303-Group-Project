@@ -57,7 +57,7 @@ function redraw(year){
 }
 
 function getData(team, id){
-    console.log("team: "+team+", id: "+id);
+    //console.log("team: "+team+", id: "+id);
     var data = createEmptyData(team);
     calculateStatistics(data);
     return data;
@@ -133,16 +133,19 @@ function constructPieChartData(data){
     var pieChart = {
         data: [
             {
-                label: "wins",
-                value: data.wins
+                label: "Wins",
+                value: data.wins,
+                fill: "red"
             },
             {
-                label: "loses",
-                value: data.loses
+                label: "Loses",
+                value: data.loses,
+                fill: "blue"
             },
             {
-                label: "draws",
-                value: data.draws
+                label: "Draws",
+                value: data.draws,
+                fill: "orange"
             }
         ]
     };
@@ -157,7 +160,8 @@ function constructSecondaryPieChartData(data, type){
     for(var i = 0; i < TEAMS.length; i++){
         pieChart.data[i] = {
             label: abbreviateName(TEAMS[i].team),
-            value: getValue(data[i], type)
+            value: getValue(data[i], type),
+            fill : TEAMS[i].fill
         };
     }
     
@@ -214,7 +218,7 @@ function updatePieChart(data, chart){
 
     slice.enter()
         .insert("path")
-        .style("fill", function(d) { return color(d.data.label); })
+        .style("fill", function(d){return d.data.fill;})
         .style("opacity", 0.63)
         .style("stroke", "black")
         .attr("class", "slice");
