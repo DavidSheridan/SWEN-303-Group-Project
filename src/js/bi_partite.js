@@ -121,7 +121,7 @@
 			.style("stroke","black").style("stroke-opacity",0);
 			
 		mainbar.append("text").attr("class","barlabel")
-			.attr("x", c1[p]-50).attr("y",function(d){ return d.middle+5;})
+			.attr("x", c1[p]-5).attr("y",function(d){ return d.middle+5;})
 			.text(function(d,i){ return data.keys[p][i];})
 			.attr("text-anchor","start" );
 			
@@ -135,7 +135,7 @@
 			.attr("x", c3[p]).attr("y",function(d){ return d.middle+5;})
 			.style("font-color", "#000000")
 			.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;})
-			.attr("text-anchor","end").style("fill","grey");
+			.attr("text-anchor","end").style("fill","black");
 			
 		d3.select("#"+id).select(".part"+p).select(".subbars")
 			.selectAll(".subbar").data(data.subBars[p]).enter()
@@ -311,7 +311,7 @@ function bi_partite(year){
 
 function redraw(year){
 	document.getElementById("bi_partite_border").innerHTML="";
-  	document.getElementById("title").innerHTML="<h2>Home VS away games for the year "+year+"</h2>"
+  	document.getElementById("title").innerHTML="<h2 font-color= #000000>Home VS away games for the year "+year+"</h2>"
 }
 
 function parse_bi_partite_data(data){
