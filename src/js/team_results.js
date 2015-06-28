@@ -53,6 +53,7 @@ function loadData(team, year){
 
 function redraw(year){
     document.getElementById("pie_primary").innerHTML="";
+    document.getElementById("pie_secondary").innerHTML="";
     document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Results for the year "+year+"</h2>";
 }
 
@@ -212,10 +213,11 @@ function setupSVG(){
 
 function updatePieChart(data, chart){
     var svg = (chart === "Primary") ? pieChart1 : pieChart2;
+    var data = data.filter(function(d){return d.value > 0;});
     /* ------- PIE SLICES -------*/
     var slice = svg.select(".slices").selectAll("path.slice")
         .data(pie(data), key);
-
+    
     slice.enter()
         .insert("path")
         .style("fill", function(d){return d.data.fill;})
