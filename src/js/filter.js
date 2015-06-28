@@ -67,5 +67,6 @@ function make_filter_buttons(button_name, filename) {
 		.text(button_name)
 		.on('click', function() {
 			update_finals_graph(filename);
+			onStartup(button_name);
 		});
 }
