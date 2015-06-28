@@ -2,42 +2,52 @@
     "teams": [
         {
             "team": "Adelaide Thunderbirds",
+            "country": "Australia",
             "fill": "#FF00FF"
         },
         {
             "team": "Central Pulse",
+            "country": "New Zealand",
             "fill": "#FFFF00"
         },
         {
             "team": "Canterbury Tactix",
+            "country": "New Zealand",
             "fill": "#800033"
         },
         {
             "team": "Melbourne Vixens",
+            "country": "Australia",
             "fill": "#003366"
         },
         {
             "team": "New South Wales Swifts",
+            "country": "Australia",
             "fill": "#FF0000"
         },
         {
             "team": "Northern Mystics",
+            "country": "New Zealand",
             "fill": "#0066FF"
         },
         {
             "team": "Queensland Firebirds",
+            "country": "Australia",
             "fill": "#993399"
         },
         {
             "team": "Southern Steel",
+            "country": "New Zealand",
             "fill": "#33CCFF"
         },
         {
             "team": "Waikato Bay of Plenty Magic",
+            "country": "New Zealand",
             "fill": "#808033"
         },
         {
             "team": "West Coast Fever",
+            "country": "Australia",
             "fill": "#004C4C"
         }
     ]
