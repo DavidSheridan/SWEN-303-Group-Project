@@ -12,6 +12,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         <script src="../js/menu.js" ></script>
+        <script src="../js/country_selector.js"></script>
         <script src="../js/chord_diagram.js" ></script>
         <script src="../js/filter.js" ></script>
 
@@ -48,7 +49,13 @@
             <div id="title" class="default">
                 
             </div>
-
+            
+            <div id="country_select" class="default">
+                <script>
+                    createCountrySelector();
+                </script>
+            </div>
+            
             <div id="win_stats" class="default">
                 <script type="text/javascript">
                     constructChordDiagram(2008);
@@ -63,7 +70,7 @@
                 make_win_filter_buttons(2011, "json/2011-Table1.json");
                 make_win_filter_buttons(2012, "json/2012-Table1.json");
                 make_win_filter_buttons(2013, "json/2013-Table1.json");
-		make_win_filter_buttons(2014, "json/2014-Table1.json");
+                make_win_filter_buttons(2014, "json/2014-Table1.json");
                 </script>
             </div>     
         </div>
