@@ -55,8 +55,10 @@
                         var data = getData(team, CURRENT_YEAR - START_YEAR);
                         var primary = constructPieChartData(data);
                         var secondary = constructSecondaryPieChartData(data.teams, "wins");
+                        var lineData = constructLineChartData(data.points);
                         updatePieChart(primary, "Primary");
                         updatePieChart(secondary, "Secondary");
+                        updateLineChart(lineData);
                     }
                 </script>
             </div>

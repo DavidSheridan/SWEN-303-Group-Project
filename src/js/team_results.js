@@ -28,7 +28,6 @@ function loadData(team, year){
         var primary = constructPieChartData(data);
         var secondary = constructSecondaryPieChartData(data.teams, "wins");
         var lineData = constructLineChartData(data.points);
-        console.log(lineData);
         updatePieChart(primary, PRIMARY);
         updatePieChart(secondary, "Secondary");
         updateLineChart(lineData);
@@ -39,6 +38,7 @@ function redraw(year){
     CURRENT_YEAR = year;
     document.getElementById("pie_primary").innerHTML="";
     document.getElementById("pie_secondary").innerHTML="";
+    document.getElementById("line_chart").innerHTML="";
     document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Performance for the year "+year+"</h2>";
 }
 
@@ -237,14 +237,6 @@ function setupSVG(){
             .attr("height", lHeight + margin.top + margin.bottom)
             .append("g")
                 .attr("transform", "translate(" + (lWidth + 200) / 4 + ", " + (lHeight - 20) / 4 + ")");
-
-    lineChart.append("rect")
-        .attr("width", 600)
-        .attr("height", 400)
-        .attr("x", -85)
-        .attr("y", -25)
-        .attr("fill", "#EDEDED")
-        .attr("stroke", "#D8D8D8");
 }
 
 /** DRAWING PIE CHART **/
@@ -406,6 +398,16 @@ var line = d3.svg.line()
     .y(function(d){return y(d.points);});
 
 function updateLineChart(data){
+    
+    lineChart.selectAll("*").remove();
+    lineChart.append("rect")
+        .attr("width", 600)
+        .attr("height", 400)
+        .attr("x", -85)
+        .attr("y", -25)
+        .attr("fill", "#EDEDED")
+        .attr("stroke", "#D8D8D8");
+    
     x.domain(d3.extent(data, function(d){return d.game;}));
     y.domain(d3.extent(data, function(d){return d.points;}));
 
