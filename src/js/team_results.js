@@ -163,15 +163,18 @@ function setupSVG(){
     
     pieChart1.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
     
-    /*pieChart2 = d3.select("#pie_secondary")
+    pieChart2 = d3.select("#pie_secondary")
         .append("svg")
             .attr("class", "pie_secondary")
+            .attr("width", width)
+            .attr("height", height)
             .append("g");
+            
     pieChart2.append("g").attr("class", "slices");
     pieChart2.append("g").attr("class", "labels");
     pieChart2.append("g").attr("class", "lines");
 
-    pieChart2.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");*/
+    pieChart2.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 }
 
 function updatePieChart(data, chart){

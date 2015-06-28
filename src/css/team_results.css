@@ -21,3 +21,11 @@ polyline{
     stroke-width: 2px;
     fill: none;
 }
+
+.pie_primary{
+    float: left;
+}
+
+.pie_secondary{
+    float: right;
+}
