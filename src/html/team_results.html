@@ -3,7 +3,6 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/team_results.css">
-
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -14,7 +13,7 @@
         <script src="../js/menu.js" ></script>
         <script src="../js/functions.js"></script>
         <script src="../js/team_selector.js"></script>
-        <script src="../js/team_results.js"></scrip>
+        <script src="../js/team_results.js"></script>
         <script src="../js/filter.js" ></script>
 
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"> </script>
@@ -38,7 +37,7 @@
 
             <!-- Title information goes here -->
             <div id="title" class="default">
-                <h2>Team Results for the year 20XX</h2>
+                
             </div>
             
             <div id="team_select" class="default">
@@ -58,8 +57,13 @@
             
             <div id="filters" class="default">
                 <script type="text/javascript">
-                    make_season_filter();
-                </script>
+                make_team_filter_buttons(2008, "json/2008-Table1.json");
+                make_team_filter_buttons(2009, "json/2009-Table1.json");
+                make_team_filter_buttons(2010, "json/2010-Table1.json");
+                make_team_filter_buttons(2011, "json/2011-Table1.json");
+                make_team_filter_buttons(2012, "json/2012-Table1.json");
+                make_team_filter_buttons(2013, "json/2013-Table1.json");
+            </script>
             </div>     
         </div>
     </body>

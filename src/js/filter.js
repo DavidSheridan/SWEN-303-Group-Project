@@ -109,3 +109,20 @@ function make_win_filter_buttons(button_name, filename){
 			constructChordDiagram(button_name);
 		});
 }
+
+function make_team_filter_buttons(button_name, filename){
+	d3.select("#filters")
+		.append('button')
+		.attr('type', 'button')
+		.style('width', '25%')
+		.style('border-radius', '10')
+		.style('background-color', '#00aeef')
+		.style('border-color', '#000')
+		.style('border-style', 'ridge')
+		.style('border-width', '2')
+		.classed('btn btn-primary btn-lg', true)
+		.text(button_name)
+		.on('click', function() {
+			loadData("Adelaide Thunderbirds", button_name);
+		});
+}

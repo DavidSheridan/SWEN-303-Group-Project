@@ -34,6 +34,7 @@ var color = d3.scale.ordinal()
     .range(["red", "blue", "green"]);
 
 function loadData(team, year){
+    redraw(year);
     setupSVG();
     // load team data
     (function(){d3.json("json/teams.json", function(data){TEAMS = data.teams;});})();
@@ -46,6 +47,11 @@ function loadData(team, year){
         var pieData = constructPieChartData(data);
         updatePieChart(pieData.data, PRIMARY);
     });})();
+}
+
+function redraw(year){
+    document.getElementById("pie_primary").innerHTML="";
+    document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Results for the year "+year+"</h2>";
 }
 
 function getData(team, id){
