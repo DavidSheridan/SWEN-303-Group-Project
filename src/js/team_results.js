@@ -227,12 +227,11 @@ function updatePieChart(data, chart){
             .on("mouseover", function(d, i){
                 d3.select(this).transition().style("opacity", 1);
                 var selected = getSelection(i);
-                console.log(selected);
                 var data = (getData(TEAMS[current].team, 0));
                 var pie = constructSecondaryPieChartData(data.teams, selected);
                 updatePieChart(pie, "Secondary");
             })
-            .on("mouseout", function(d){d3.select(this).transition().style("opacity", 0.63);})
+            .on("mouseout", function(d){d3.select(this).style("opacity", 0.63);})
             .attr("class", "slice");
     }
     else{
@@ -240,7 +239,7 @@ function updatePieChart(data, chart){
             .insert("path")
             .style("fill", function(d){return d.data.fill;})
             .style("stroke", "black")
-            .attr("class", "slice");    
+            .attr("class", "slice");
     }
 
     slice.transition().duration(1000)
@@ -264,7 +263,7 @@ function updatePieChart(data, chart){
         .append("text")
             .attr("dy", ".35em")
             .text(function(d) {
-                return d.data.label;
+                return d.data.label + " ("+d.data.value+")";
             });
 	
     function midAngle(d){
