@@ -88,3 +88,18 @@ function make_bip_filter_buttons(button_name, filename) {
 			bi_partite(button_name);
 		});
 }
+
+function make_win_filter_buttons(button_name, filename){
+	d3.select("#filters")
+		.append('button')
+		.attr('type', 'button')
+		.style('width', '25%')
+		.style('border-radius', '0')
+		.style('background-color', '#00aeef')
+		.style('border-color', '#00aeef')
+		.classed('btn btn-primary btn-lg', true)
+		.text(button_name)
+		.on('click', function() {
+			constructChordDiagram(button_name);
+		});
+}

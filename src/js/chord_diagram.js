@@ -3,8 +3,9 @@ var matrixData = [];
 var dataset = [];
 var teams = [];
 
-function constructChordDiagram(){
-    d3.json("json/2008-Table1.json", function(data){
+function constructChordDiagram(year){
+    redraw(year);
+    d3.json("json/"+year+"-Table1.json", function(data){
         dataset = data.rounds;
         
         d3.json("json/teams.json", function(data){
@@ -15,6 +16,11 @@ function constructChordDiagram(){
             drawChordDiagram(matrixData);
         });
     });
+}
+
+function redraw(year){
+    document.getElementById("win_stats").innerHTML="";
+  document.getElementById("title").innerHTML="<h2>Win Statistics for the year "+year+"</h2>"
 }
 
 function drawChordDiagram(data){

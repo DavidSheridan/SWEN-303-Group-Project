@@ -44,18 +44,23 @@
 
             <!-- Title information goes here -->
             <div id="title" class="default">
-                <h2>Win Statistics for the year 20XX</h2>
+                
             </div>
 
             <div id="win_stats" class="default">
                 <script type="text/javascript">
-                    constructChordDiagram();
+                    constructChordDiagram(2008);
                 </script>
             </div>
             
             <div id="filters" class="default">
                 <script type="text/javascript">
-                    make_season_filter();
+                make_win_filter_buttons(2008, "json/2008-Table1.json");
+                make_win_filter_buttons(2009, "json/2009-Table1.json");
+                make_win_filter_buttons(2010, "json/2010-Table1.json");
+                make_win_filter_buttons(2011, "json/2011-Table1.json");
+                make_win_filter_buttons(2012, "json/2012-Table1.json");
+                make_win_filter_buttons(2013, "json/2013-Table1.json");
                 </script>
             </div>     
         </div>
