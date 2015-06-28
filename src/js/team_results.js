@@ -212,18 +212,36 @@ function setupSVG(){
 }
 
 function updatePieChart(data, chart){
-    var svg = (chart === "Primary") ? pieChart1 : pieChart2;
+    var svg = (chart === PRIMARY) ? pieChart1 : pieChart2;
     var data = data.filter(function(d){return d.value > 0;});
     /* ------- PIE SLICES -------*/
     var slice = svg.select(".slices").selectAll("path.slice")
         .data(pie(data), key);
     
-    slice.enter()
-        .insert("path")
-        .style("fill", function(d){return d.data.fill;})
-        .style("opacity", 0.63)
-        .style("stroke", "black")
-        .attr("class", "slice");
+    if(chart === PRIMARY){
+        slice.enter()
+            .insert("path")
+            .style("fill", function(d){return d.data.fill;})
+            .style("opacity", 0.63)
+            .style("stroke", "black")
+            .on("mouseover", function(d, i){
+                d3.select(this).transition().style("opacity", 1);
+                var selected = getSelection(i);
+                console.log(selected);
+                var data = (getData(TEAMS[current].team, 0));
+                var pie = constructSecondaryPieChartData(data.teams, selected);
+                updatePieChart(pie, "Secondary");
+            })
+            .on("mouseout", function(d){d3.select(this).transition().style("opacity", 0.63);})
+            .attr("class", "slice");
+    }
+    else{
+        slice.enter()
+            .insert("path")
+            .style("fill", function(d){return d.data.fill;})
+            .style("stroke", "black")
+            .attr("class", "slice");    
+    }
 
     slice.transition().duration(1000)
         .attrTween("d", function(d) {
@@ -300,3 +318,13 @@ function updatePieChart(data, chart){
 	
     polyline.exit().remove();
 };
+
+function getSelection(index){
+    if(index === 0){
+        return "wins";
+    }
+    else if(index === 1){
+        return "loses";
+    }
+    return "draws";
+}
