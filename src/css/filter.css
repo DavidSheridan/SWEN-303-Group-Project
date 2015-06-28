@@ -1,5 +1,6 @@
 svg {
-  font: 10px sans-serif;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 circle {
@@ -11,7 +12,7 @@ circle {
 }
 
 .selecting circle.selected {
-  stroke: #f00;
+  stroke: #00aeef;
 }
 
 .resize path {
@@ -23,7 +24,7 @@ circle {
 
 .axis path, .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #00aeef;
   shape-rendering: crispEdges;
 }
 
