@@ -8,31 +8,7 @@ var PRIMARY = "Primary";
 var CURRENT_TEAM;
 var CURRENT_YEAR;
 
-var pieChart1, pieChart2;
-
-var width = 450;
-var height = 300;
-var radius = Math.min(width, height) / 2;
-
-var pie = d3.layout.pie()
-    .sort(null)
-    .value(function(d) {
-        return d.value;
-    });
-
-var arc = d3.svg.arc()
-    .outerRadius(radius * 0.8)
-    .innerRadius(radius * 0.4);
-
-var outerArc = d3.svg.arc()
-    .innerRadius(radius * 0.9)
-    .outerRadius(radius * 0.9);
-
-var key = function(d){ return d.data.label; };
-
-var color = d3.scale.ordinal()
-    .domain(["Wins", "Loses", "Draws"])
-    .range(["red", "blue", "green"]);
+var pieChart1, pieChart2, lineChart; // svgs
 
 function loadData(team, year){
     redraw(year);
@@ -48,10 +24,14 @@ function loadData(team, year){
     (function(){d3.json(filename, function(error, data){
         DATA = data.championships;
         var data = getData(team, year - START_YEAR);
+        console.log(data.points);
         var primary = constructPieChartData(data);
         var secondary = constructSecondaryPieChartData(data.teams, "wins");
+        var lineData = constructLineChartData(data.points);
+        console.log(lineData);
         updatePieChart(primary, PRIMARY);
         updatePieChart(secondary, "Secondary");
+        updateLineChart(lineData);
     });})();
 }
 
@@ -186,7 +166,26 @@ function constructSecondaryPieChartData(data, type){
     }
 }
 
-/** DRAWING PIE CHART **/
+function constructLineChartData(data){
+    var temp = [];
+    for(var i = 0; i < data.length; i++){
+        temp[i] = {
+            points: data[i],
+            game: i + 1
+        }
+    }
+    return temp;
+}
+
+function getSelection(index){
+    if(index === 0){
+        return "wins";
+    }
+    else if(index === 1){
+        return "loses";
+    }
+    return "draws";
+}
 
 function setupSVG(){
     pieChart1 = d3.select("#pie_primary")
@@ -214,7 +213,42 @@ function setupSVG(){
     pieChart2.append("g").attr("class", "lines");
 
     pieChart2.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    
+    lineChart = d3.select("#line_chart")
+        .append("svg")
+            .attr("class", "line_chart")
+            .attr("width", lWidth + margin.left + margin.right)
+            .attr("height", lHeight + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform", "translate(" + margin.left + ", " + margin.right + ")");
+            
 }
+
+/** DRAWING PIE CHART **/
+
+var width = 450;
+var height = 300;
+var radius = Math.min(width, height) / 2;
+
+var pie = d3.layout.pie()
+    .sort(null)
+    .value(function(d) {
+        return d.value;
+    });
+
+var arc = d3.svg.arc()
+    .outerRadius(radius * 0.8)
+    .innerRadius(radius * 0.4);
+
+var outerArc = d3.svg.arc()
+    .innerRadius(radius * 0.9)
+    .outerRadius(radius * 0.9);
+
+var key = function(d){ return d.data.label; };
+
+var color = d3.scale.ordinal()
+    .domain(["Wins", "Loses", "Draws"])
+    .range(["red", "blue", "green"]);
 
 function updatePieChart(data, chart){
     var svg = (chart === PRIMARY) ? pieChart1 : pieChart2;
@@ -323,12 +357,52 @@ function updatePieChart(data, chart){
     polyline.exit().remove();
 };
 
-function getSelection(index){
-    if(index === 0){
-        return "wins";
-    }
-    else if(index === 1){
-        return "loses";
-    }
-    return "draws";
+/** DRAWING LINE CHART **/
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50};
+var lWidth = 900;
+var lHeight = 400;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+    
+var y = d3.scale.linear()
+    .range([height, 0]);
+    
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+    
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+    
+var line = d3.svg.line()
+    .x(function(d){return x(d.game);})
+    .y(function(d){return y(d.points);});
+
+function updateLineChart(data){
+    console.log("update line chart");
+    x.domain(d3.extent(data, function(d){return d.game;}));
+    y.domain(d3.extent(data, function(d){return d.points;}));
+    console.log("add x axis");
+    lineChart.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0, " + height +")")
+        .call(xAxis);
+    console.log("add y axis");
+    lineChart.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Points Scored Per Game");
+    console.log("add path");
+    lineChart.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
 }
