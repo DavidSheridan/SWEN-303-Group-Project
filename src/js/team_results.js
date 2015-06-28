@@ -5,7 +5,8 @@ var DATA = [];
 var TEAMS = [];
 var START_YEAR = 2008;
 var PRIMARY = "Primary";
-var current = 0;
+var CURRENT_TEAM;
+var CURRENT_YEAR;
 
 var pieChart1, pieChart2;
 
@@ -39,19 +40,23 @@ function loadData(team, year){
     // load team data
     (function(){d3.json("json/teams.json", function(data){TEAMS = data.teams;});})();
     
+    CURRENT_TEAM = convertTeamToInt(team, TEAMS);
+    CURRENT_YEAR = year;
+    
     // load in netball data
     var filename = "json/data.json";
     (function(){d3.json(filename, function(error, data){
         DATA = data.championships;
         var data = getData(team, year - START_YEAR);
-        var pieData = constructPieChartData(data);
-        var test = constructSecondaryPieChartData(data.teams, "wins");
-        updatePieChart(pieData, PRIMARY);
-        updatePieChart(test, "Secondary");
+        var primary = constructPieChartData(data);
+        var secondary = constructSecondaryPieChartData(data.teams, "wins");
+        updatePieChart(primary, PRIMARY);
+        updatePieChart(secondary, "Secondary");
     });})();
 }
 
 function redraw(year){
+    CURRENT_YEAR = year;
     document.getElementById("pie_primary").innerHTML="";
     document.getElementById("pie_secondary").innerHTML="";
     document.getElementById("title").innerHTML="<h2 font-color= #000000>Team Results for the year "+year+"</h2>";
@@ -227,7 +232,7 @@ function updatePieChart(data, chart){
             .on("mouseover", function(d, i){
                 d3.select(this).transition().style("opacity", 1);
                 var selected = getSelection(i);
-                var data = (getData(TEAMS[current].team, 0));
+                var data = (getData(TEAMS[CURRENT_TEAM].team, CURRENT_YEAR - START_YEAR));
                 var pie = constructSecondaryPieChartData(data.teams, selected);
                 updatePieChart(pie, "Secondary");
             })

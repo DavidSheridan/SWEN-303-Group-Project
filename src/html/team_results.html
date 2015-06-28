@@ -49,7 +49,7 @@
                     createTeamSelector();
                     
                     function performFunction(team){
-                        var data = getData(team, 0);
+                        var data = getData(team, CURRENT_YEAR - START_YEAR);
                         var primary = constructPieChartData(data);
                         var secondary = constructSecondaryPieChartData(data.teams, "wins");
                         updatePieChart(primary, "Primary");
