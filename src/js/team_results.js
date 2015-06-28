@@ -191,7 +191,7 @@ function setupSVG(){
     pieChart1 = d3.select("#pie_primary")
         .append("svg")
             .attr("class", "pie_primary")
-            .attr("width", width)
+            .attr("width", width + 40)
             .attr("height", height)
             .append("g");
     
@@ -207,12 +207,12 @@ function setupSVG(){
     pieChart1.append("g").attr("class", "labels");
     pieChart1.append("g").attr("class", "lines");
     
-    pieChart1.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    pieChart1.attr("transform", "translate(" + 280 + "," + height / 2 + ")");
     
     pieChart2 = d3.select("#pie_secondary")
         .append("svg")
             .attr("class", "pie_secondary")
-            .attr("width", width)
+            .attr("width", width + 50)
             .attr("height", height)
             .append("g");
             
@@ -228,7 +228,7 @@ function setupSVG(){
     pieChart2.append("g").attr("class", "labels");
     pieChart2.append("g").attr("class", "lines");
 
-    pieChart2.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    pieChart2.attr("transform", "translate(" + 220 + "," + height / 2 + ")");
     
     lineChart = d3.select("#line_chart")
         .append("svg")
@@ -236,8 +236,15 @@ function setupSVG(){
             .attr("width", lWidth + margin.left + margin.right)
             .attr("height", lHeight + margin.top + margin.bottom)
             .append("g")
-                .attr("transform", "translate(" + lWidth / 4 + ", " + lHeight / 4 + ")");
-            
+                .attr("transform", "translate(" + (lWidth + 200) / 4 + ", " + (lHeight - 20) / 4 + ")");
+
+    lineChart.append("rect")
+        .attr("width", 600)
+        .attr("height", 400)
+        .attr("x", -85)
+        .attr("y", -25)
+        .attr("fill", "#EDEDED")
+        .attr("stroke", "#D8D8D8");
 }
 
 /** DRAWING PIE CHART **/
@@ -282,7 +289,7 @@ function updatePieChart(data, chart){
             .on("mouseover", function(d, i){
                 d3.select(this).transition().style("opacity", 1);
                 var selected = getSelection(i);
-                
+
                 var data = (getData(TEAMS[CURRENT_TEAM].team, CURRENT_YEAR - START_YEAR));
                 var pie = constructSecondaryPieChartData(data.teams, selected);
                 updatePieChart(pie, "Secondary");
@@ -307,7 +314,7 @@ function updatePieChart(data, chart){
                 return arc(interpolate(t));
             };
         })
-
+    
     slice.exit().remove();
 
 	/* ------- TEXT LABELS -------*/
