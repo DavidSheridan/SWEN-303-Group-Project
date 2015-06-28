@@ -7,6 +7,10 @@ var PRIMARY = "Primary";
 var CURRENT_COUNTRY;
 var CURRENT_YEAR;
 
+var ALL = "All";
+var AUS = "Australia";
+var NZ = "New Zealand";
+
 var pieChart1, pieChart2, lineChart; // svgs
 
 function loadData(country, year){
@@ -23,6 +27,9 @@ function loadData(country, year){
 
     (function(){d3.json(filename, function(error, data){
         DATA = data.rounds;
+        
+        console.log(filterByCountry(data.rounds, ALL));
+        
         var matrixData = createEmptyAdjacencyMatrix(TEAMS.length);
         var test = populateAdjacencyMatrix(DATA, TEAMS, matrixData);
             
@@ -31,21 +38,33 @@ function loadData(country, year){
     });})();
 }
 
-/*
-function constructChordDiagram(year){
-    redraw(year);
-    d3.json("json/"+year+"-Table1.json", function(data){
-        dataset = data.rounds;
-        
-        d3.json("json/teams.json", function(data){
-            teams = data.teams;
-            matrixData = createEmptyAdjacencyMatrix(teams.length);
-            populateAdjacencyMatrix(dataset, teams, matrixData);
-            
-            drawChordDiagram(matrixData);
-        });
-    });
-}*/
+function filterByCountry(data, country){
+    var temp = [];
+    var index = 0;
+    for(var i = 0; i < data.length; i++){
+        var games = data[i].round.games;
+        for(var j = 0; j < games.length; j++){
+            if(country === ALL){
+                temp[index] = games[j];
+                index++;
+            }
+            else{
+                // get team data from current game
+                var home = games[j]["Home Team"];
+                var away = games[j]["Away Team"];
+                var homeIndex = convertTeamToInt(home, TEAMS);
+                var awayIndex = convertTeamToInt(away, TEAMS);
+                var homeCountry = TEAMS[homeIndex].country;
+                var awayCountry = TEAMS[awayIndex].country;
+                if(homeCountry === country && awayCountry === country){
+                    temp[index] = games[j];
+                    index++;
+                }
+            }
+        }
+    }
+    return temp;
+}
 
 function redraw(year){
     document.getElementById("win_stats").innerHTML="";
@@ -59,6 +78,7 @@ var chord = d3.layout.chord()
         
 var width = 450;
 var height = 450;
+var radius = Math.min(width, height) / 2;
 var innerRadius = Math.min(width, height) * 0.41;
 var outerRadius = innerRadius * 1.1;
     
@@ -74,6 +94,10 @@ var text = d3.select("#win_stats").append("svg")
     .attr("height", height)
     .append("g")
         .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")");
+
+var outerArc = d3.svg.arc()
+    .innerRadius(radius * 0.9)
+    .outerRadius(radius * 0.9);
 
 function setupSVG(){
     svg = d3.select("#win_stats").append("svg")
@@ -105,6 +129,34 @@ function updateChordDiagram(data){
                         .attr("d", d3.svg.chord().radius(innerRadius))
                         .style("fill", function(d){return fill(d.source.index);})
                         .style("opacity", 1);
+                        
+    var text = svg.append("g").selectAll("text")
+        .data(data);
+        
+    text.enter()
+        .append("text")
+            .attr("dy", ".35em")
+            .text(function(d, i){
+                    var t = convertIntToTeam(i, TEAMS);
+                    return t.team;
+                });
+    
+    function midAngle(d){
+        return d.startAngle + (d.endAngle - d.startAngle) / 2;
+    }
+    
+    text.transition().duration(0)
+        .attrTween("transform", function(d){
+            this._current = this._current || d;
+            var interpolate = d3.interpolate(this._current, d);
+            this._current = interpolate(0);
+            return function(t){
+                var d2 = interpolate(t);
+                var pos = outerArc.centroid(d2);
+                pos[0] = outerRadius * (midAngle(d2) < Math.PI ? 1 : -1);
+                return "translate(" + pos + ")";
+            }
+        })
 }
 
 /**
